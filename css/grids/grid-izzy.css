@@ -1,0 +1,226 @@
+/* --------------------------------
+	-Sistema de grids IzzyWeb  
+	-Autor: Joanez Andrades
+	-12/08/2015 
+----------------------------------- */
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6{
+	float: left;
+}
+
+.grid-1{
+	width: 100%;
+}
+.grid-2{
+	width: 49.5%;
+	margin-left: .5%;
+}
+.grid-3{
+	width: 32.8333333%;
+	margin-left: .5%;
+}
+.grid-4{
+	width: 24.5%;
+	margin-left: .5%;
+}
+.grid-5{
+	width: 19.5%;
+	margin-left: .5%;
+}
+.grid-6{
+	width: 16.1666667%;
+	margin-left: .5%;
+}
+
+/*Max-Width 480px*/
+@media(max-width: 480px){
+	.container{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.colunm-1,
+	.colunm-2,
+	.colunm-3,
+	.colunm-4,
+	.colunm-5,
+	.colunm-6,
+	.colunm-7,
+	.colunm-8,
+	.colunm-9,
+	.colunm-10,
+	.colunm-11,
+	.colunm-12 {
+		width: 100%;
+		float: left;
+	}
+}
+
+/*Min-Width 480px*/
+@media(min-width: 480px){
+	.container{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.colunm-1,
+	.colunm-3,
+	.colunm-4,
+	.colunm-5,
+	.colunm-6,
+	.colunm-7,
+	.colunm-8,
+	.colunm-9,
+	.colunm-10,
+	.colunm-11,
+	.colunm-12 {
+		width: 100%;
+		float: left;
+	}
+	.colunm-2 {
+		width: 50%;
+		float: left;
+	}
+}
+
+/*Min-Width 768px*/
+@media(min-width: 768px){
+	.container{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.colunm-1,
+	.colunm-6,
+	.colunm-7,
+	.colunm-8,
+	.colunm-9,
+	.colunm-10,
+	.colunm-11,
+	.colunm-12{
+		width: 100%;
+		float: left; 
+	}
+	.colunm-2{
+		width: 50%;
+		float: left;
+	}
+	.colunm-3{
+		width: 33.3333333%;
+		float: left;
+	}
+	.colunm-4{
+		width: 25%;
+		float: left;
+	}
+	.colunm-5{
+		width: 20%;
+		float: left;
+	}	
+}
+
+/*Min-Width 1024*/
+@media(min-width: 1024px){
+	.container{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.colunm-1{
+		width: 100%;
+		float: left;
+	}
+	.colunm-2{
+		width: 50%;
+		float: left;
+	}
+	.colunm-3{
+		width: 33.3333333%;
+		float: left;
+	}
+	.colunm-4{
+		width: 25%;
+		float: left;
+	}
+	.colunm-5{
+		width: 20%;
+		float: left;
+	}
+	.colunm-6{
+		width: 16.6666667%;
+		float: left;
+	}
+	.colunm-7{
+		width: 14.2857143%;
+		float: left;
+	}
+	.colunm-8{
+		width: 12.5%;
+		float: left;
+	}
+	.colunm-9{
+		width: 11.1111111%;
+		float: left;
+	}
+	.colunm-10,
+	.colunm-11,
+	.colunm-12{
+		width: 10%;
+		float: left;
+	}
+
+}
+
+/*Min-Width 1366px*/
+@media(min-width: 1366px){
+	
+	.container{
+		width: 100%;
+		margin: 0 auto; 
+	}
+	.colunm-1{
+		width: 100%;
+		float: left;
+	}
+	.colunm-2{
+		width: 50%;
+		float: left;
+	}
+	.colunm-3{
+		width: 33.3333333%;
+		float: left;
+	}
+	.colunm-4{
+		width: 25%;
+		float: left;
+	}
+	.colunm-5{
+		width: 20%;
+		float: left;
+	}
+	.colunm-6{
+		width: 16.6666667%;
+		float: left;
+	}
+	.colunm-7{
+		width: 14.2857143%;
+		float: left;
+	}
+	.colunm-8{
+		width: 12.5%;
+		float: left;
+	}
+	.colunm-9{
+		width: 11.1111111%;
+		float: left;
+	}
+	.colunm-10{
+		width: 10%;
+		float: left;
+	}
+	.colunm-11{
+		width: 9.09090909%;
+		float: left;
+	}
+	.colunm-12{
+		width: 8.33333333%;
+		float: left;
+	}
+
+	
+}

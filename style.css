@@ -1,0 +1,223 @@
+/*Ficheiro onde fica o stylesheet do tema*/
+
+/* Import */
+@import url(http://localhost/wp/wp-content/themes/Portal%20Prefeitura/css/reset.css);
+@import url(http://localhost/wp/wp-content/themes/Portal%20Prefeitura/css/grids/grid-izzy.css);
+
+/*--- Fontes ---*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700); /*Titulos*/
+@import url(https://fonts.googleapis.com/css?family=Cantarell:700); /*Paragrafos*/
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:700); /*Menu*/
+
+
+/*-- Import ico - Tributes for ico-Free Fonts, thanks! :) --*/
+@font-face {
+    font-family: 'ico';
+    src: url('css/icons/IcoMoon-Free.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*--- Icones */
+.ico-search:before{ content: '\e986'; padding: .5% 1% .5% 0; }
+
+/*--- Icones #Secão-2*/
+.ico-calendar:before{ content: '\e953'; padding: 1%}
+
+/*--- Definições Globais ---*/
+/*html, body{
+	font-size: 62.5%; 
+}*/
+h1, h2, h3, h4, h5, h6, p, span, blockquote, input, textarea{
+	font-family: 'Montserrat', 'ico', sans-serif;
+}
+ol, ul, li, a, button{
+	font-family: 'Montserrat', 'ico', sans-serif;
+} 
+
+@media(min-width: 1200px){
+	/*--- Definições de font-size ---*/
+	h1{ font-size: 5em; }
+	h2{ font-size: 4em; }
+	h3{ font-size: 3em; }
+	h4{ font-size: 2.5em;}
+	h5{ font-size: 2em;}
+
+	p{ font-size: 1em; }
+	span{ font-size: .6em;}
+
+	header.principal{
+		width: 100%;
+		height: 100vh;
+	}
+
+	/* Menu de acesso rápido*/
+	header.principal nav.fast-access{
+		background: #EEE8F4;
+		margin: 0 auto;
+		width: 100%;
+		height: 8%;
+		border-bottom: 2px solid #D3D1C4;
+	}
+	nav.fast-access ul.menu{
+		margin-left: 15%;
+	}
+
+	nav.fast-access li a{
+		font-size: 1em;
+		padding: 1.5% 1%;
+		color: rgba(19, 24, 24, .5);
+		display: inline-block;
+		float: left;
+		text-decoration: none;
+		transition: .5s ease all;
+	}
+	nav.fast-access li a:hover{
+		background: rgba(43, 134, 134, .1);
+		color: rgba(0, 0, 0, 1);
+	}
+
+	nav.fast-access li ul.sub-menu{
+		position: relative;
+		display: none;
+	}
+	/*-------------------------------- Fim do Menu de acesso rápido*/
+
+	header.principal div.cabecalho{
+		/*background: rgba(0, 73, 75, 1);*/
+		widows: 100%;
+		height: 30%;
+	}
+
+	/*---- Logotipo/Brasão */
+	header.principal div.logo img{
+		width: auto;
+		height: 125px;
+		margin: 2%;
+	}
+	header.principal .title{
+		margin: 10% 0 1% 1%;
+	}
+
+	/*---- Search Top */
+	header.principal div.search-top input{
+		width: 90%;
+		height: auto;
+		font-size: 1.2em;
+		padding: 2% 0 2% 2%;
+		margin: 10% 5% 0 5%;
+		border: 2px solid #C5C3C6;
+		border-radius: 5px;
+	}
+	header.principal div.search-top button{
+		background: none;
+		width: 50%;
+		height: auto;
+		font-size: 1.2em;
+		padding: 2% 0 2% 0;
+		margin: 1% 3% 0 47%;
+		border: 2px solid #536D78;
+		border-radius: 5px;
+		transition: .5s ease all;
+	}
+	header.principal div.search-top button:hover{
+		background: rgba(4, 181, 164, .5);
+	}
+
+	/*---- Previsão do tempo */
+
+	header.principal div.clima iframe{
+		margin: 4% 2%;
+		float: right;
+	}
+
+	/*---- Menu principal */
+	header nav.main-menu {
+		background: rgba(33, 114, 107, 1);
+		width: 100%;
+		height: 10%;
+	}
+	header nav.main-menu li {
+		margin: 0;
+	}
+	header nav.main-menu li a{
+		color: rgba(238, 232, 244, .5);
+		padding: 2%;
+		float: left;
+		text-decoration: none;
+	}
+	header nav.main-menu li ul.sub-menu{
+		display: none;
+	}
+
+	/*---- Slider */
+	header.principal div.slider-main{
+		width: 100%;
+		height: 50%;
+		overflow: hidden;
+	}
+
+	.slider-main ul.slider-body{
+		width: 100%;
+	}
+	.slider-main ul.slider-body li.slider-item {
+		width: 100%;
+		float: left;
+	}
+	.slider-main ul.slider-body li.slider-item img{
+		width: 100%;
+		position: relative;
+	}
+
+	/* Fim do header ----*/
+
+	/*---- Início da seção2 */
+
+	section#secao-2{
+		background: #FFF8FD;
+		width: auto;
+		height: 100vh;
+	}
+	/*--- Definições de font-size ---*/
+	section#secao-2 h1{ font-size: 5em; color: #474855;}
+	section#secao-2 h2{ font-size: 4em; color: #474855;}
+	section#secao-2 h3{ font-size: 3em; color: #474855;}
+	section#secao-2 h4{ font-size: 1.8em; color: #474855;}
+	section#secao-2 h5{ font-size: 1.5em; color: #474855;}
+
+	section#secao-2 p{ font-size: .8em; }
+	section#secao-2 span, ul li{ font-size: .6em;}
+
+	section#secao-2 article.box-noticias{
+		height: 85%;
+		margin-top: 5%;
+		overflow: hidden;
+	}
+
+	section#secao-2 article.box-noticias div.news{
+		width: 100%;
+		height: 20%;
+		border-bottom: 2px solid;
+	}
+	section#secao-2 article.box-noticias div.news img{
+		width: 150px;
+		height: 100px;
+		float: left;
+		margin: .5%;
+		border: 2px solid rgba(228, 228, 224, 1);
+		border-radius: 5px;
+
+	}
+	section#secao-2 article.box-noticias div.news div.description{
+		width: 63%;
+		float: right;
+		padding: .5%;
+	}
+	section#secao-2 article.box-noticias div.news div.description span{
+		float: right;
+		padding: .5%;
+	}
+	section#secao-2 article.box-noticias div.news div.description ul.post-categories li{
+		display: inline-block;
+	}
+}

@@ -12,7 +12,7 @@
 		<!-- Cabeçalho com a logo input de buscas e previsão do tempo -->
 		<div class="cabecalho">
 			<div class="colunm-3 logo">
-				<img src="http://localhost/wp-content/themes/Portal%20Prefeitura/img/santalucia-logo.png" class="colunm-3">	
+				<img src="http://localhost/wp/wp-content/uploads/2016/02/santalucia.png" class="colunm-3">	
 				<h4 class="title"><?php bloginfo('name') ?></h4>
 				<span><?php bloginfo('description') ?></span>
 			</div>
@@ -66,6 +66,7 @@
 		<article class="box-noticias colunm-3">
 		<h5 class="ico-news title-news">Notícias</h5>
 		<!-- Função que faz a chamada dos posts -->
+		<?php query_posts('showposts=5') ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
 		<!-- Dados do post -->
 			<div class="news">
@@ -98,16 +99,17 @@
 		<article class="box-videos colunm-3">
 		<h5 class="ico-tv-pref title-tvpref">Tv Prefeitura</h5>
 			<!-- Função que faz a chamada dos posts -->
+			<?php query_posts('showposts=3') ?>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
 			<!-- Dados do post -->
 			<div class="preview-video">
 				<?php the_post_thumbnail('medium') ?>
 				<div class="description">
-					<span>Postado por: <?php the_author() ?> em <?php the_time('d/M/Y') ?></span>
-					<span><?php comments_popup_link('Sem comentários', '1 Comentário', '% Comentários', 'comments-link', ''); ?></span>
+					<h5><?php the_title() ?></h5>
+					<a href="<?php the_permalink() ?>"><i class="ico-playtv"></i></a>
+					<span class="ico-calendar"><?php the_time('d/M/Y') ?></span>
 					<span><?php edit_post_link(('Editar')); ?></span>
-					<p><?php the_excerpt(); ?></p>
-				</div>			
+				</div>		
 			</div>
 
 			<?php endwhile ?>
@@ -159,8 +161,10 @@
 
 
 <!-- Bibliotecas Javascript -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="http://localhost/wp/wp-content/themes/Portal Prefeitura/js/events.js"></script>
+<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="http://localhost/wp/wp-content/themes/Portal Prefeitura/js/events.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <!-- Chamada da sidebar e footer -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

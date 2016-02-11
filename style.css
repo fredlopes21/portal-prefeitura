@@ -6,7 +6,7 @@
 
 /*--- Fontes ---*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700); /*Titulos*/
-@import url(https://fonts.googleapis.com/css?family=Cantarell:700); /*Paragrafos*/
+@import url(https://fonts.googleapis.com/css?family=Poppins); /*Paragrafos*/
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:700); /*Menu*/
 
 
@@ -22,15 +22,23 @@
 .ico-search:before{ content: '\e986'; padding: .5% 1% .5% 0; }
 
 /*--- Icones #Secão-2*/
+.ico-news:before{ content: '\e904'; padding-left: 1%;}
 .ico-calendar:before{ content: '\e953'; padding: 1%}
+.ico-tv-pref:before{ content: '\e914'; padding: 1%;}
+.ico-mural:before{ content: '\e91a'; padding: 1%;}
+.ico-expand:before{ content: '\e989'; padding: 2%}
+.ico-link:before{ content: '\e9cb'; padding: 2%; display: block;}
 
 /*--- Definições Globais ---*/
 /*html, body{
 	font-size: 62.5%; 
 }*/
-h1, h2, h3, h4, h5, h6, p, span, blockquote, input, textarea{
+h1, h2, h3, h4, h5, h6{
 	font-family: 'Montserrat', 'ico', sans-serif;
 }
+ p, span, blockquote, input, textarea{
+ 	font-family: 'Poppins', 'ico', sans-serif;
+ }
 ol, ul, li, a, button{
 	font-family: 'Montserrat', 'ico', sans-serif;
 } 
@@ -179,37 +187,67 @@ ol, ul, li, a, button{
 		height: 100vh;
 	}
 	/*--- Definições de font-size ---*/
-	section#secao-2 h1{ font-size: 5em; color: #474855;}
-	section#secao-2 h2{ font-size: 4em; color: #474855;}
-	section#secao-2 h3{ font-size: 3em; color: #474855;}
+	section#secao-2 h1{ font-size: 3.2em; color: #474855;}
+	section#secao-2 h2{ font-size: 2.7em; color: #474855;}
+	section#secao-2 h3{ font-size: 2.3em; color: #474855;}
 	section#secao-2 h4{ font-size: 1.8em; color: #474855;}
 	section#secao-2 h5{ font-size: 1.5em; color: #474855;}
+	section#secao-2 h6{font-size: 1.2em; color: #474855;}
 
 	section#secao-2 p{ font-size: .8em; }
 	section#secao-2 span, ul li{ font-size: .6em;}
 
-	section#secao-2 article.box-noticias{
+/*--- Box-Noticias #news */
+	section#secao-2 article.box-noticias, .box-videos, .mural-recados{
 		height: 85%;
-		margin-top: 5%;
+		margin-top: 2%;
 		overflow: hidden;
 	}
-
-	section#secao-2 article.box-noticias div.news{
+	section#secao-2 article.box-noticias .title-news{
 		width: 100%;
-		height: 20%;
-		border-bottom: 2px solid;
+		color: rgba(212, 29, 55, .9);
+		
+		text-align: left;
+		padding: 1%;
+		border-bottom: 2px solid rgba(212, 29, 55, .9)
+	}
+	section#secao-2 article.box-noticias div.news{
+		background: rgba(0, 0, 11, .1);
+		width: 100%;
+		height: 15%;
+		padding: 1% 0 1% 0;
+		margin: 1% 0 1% 0;
+		border-bottom: 1px solid rgba(212, 29, 55, .2);
+		z-index: 9;
+	}
+	section#secao-2 article.box-noticias div.news div.mask{
+		background: rgba(0, 0, 0, .9);
+		width: 100%;
+		height: 100%;
+		padding: 1% 0 1% 0;
+		position: relative;
+		left: -100%;
+		z-index: 99;
+	}
+	section#secao-2 article.box-noticias div.news div.mask .title-mask{
+		width: 100%;
+		height: 100%;
+		color: rgba(255, 255, 255, .9);
+		text-align: center;
+		position: absolute;
+		top: 0;
 	}
 	section#secao-2 article.box-noticias div.news img{
-		width: 150px;
-		height: 100px;
+		width: 30%;
+		height: 75px;
 		float: left;
 		margin: .5%;
-		border: 2px solid rgba(228, 228, 224, 1);
+		border: 2px solid rgba(223, 232, 230, 1);
 		border-radius: 5px;
 
 	}
 	section#secao-2 article.box-noticias div.news div.description{
-		width: 63%;
+		width: 65%;
 		float: right;
 		padding: .5%;
 	}
@@ -219,5 +257,43 @@ ol, ul, li, a, button{
 	}
 	section#secao-2 article.box-noticias div.news div.description ul.post-categories li{
 		display: inline-block;
+	}
+/*--- Tv Prefeitura #tv */
+	section#secao-2 article.box-videos .title-tvpref{
+		width: 100%;
+		color: rgba(56, 88, 154, .9);
+		margin-left: 1%;
+		text-align: left;
+		padding: 1%;
+		border-bottom: 2px solid rgba(56, 88, 154, .9);
+	}
+	section#secao-2 article.box-videos div.preview-video{
+		width: 98%;
+		height: 30%;
+		margin: 1%;
+	}
+	section#secao-2 article.box-videos div.preview-video img{
+		width: 95%;
+		height: 95%;
+		margin-left: 2.5%;
+		border: 2px solid rgba(56, 88, 154, .2);
+	}
+	section#secao-2 article.box-videos div.preview-video div.description{
+		display: none;
+	}
+
+/*--- Mural de Recados #mural*/
+	section#secao-2 article.mural-recados .title-mural{
+		width: 100%;
+		color: rgba(242, 113, 56, .9);
+		margin-left: 1%;
+		text-align: left;
+		padding: 1%;
+		border-bottom: 2px solid rgba(242, 113, 56, .9)
+	}
+	section#secao-2 article.mural-recados div.message-posts{
+		width: 98%;
+		height: 40%;
+		margin: 1%; 
 	}
 }

@@ -64,17 +64,21 @@
 	<section id="secao-2" class="grid-1">
 		<!-- Notícias Box -->
 		<article class="box-noticias colunm-3">
+		<h5 class="ico-news title-news">Notícias</h5>
 		<!-- Função que faz a chamada dos posts -->
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
 		<!-- Dados do post -->
 			<div class="news">
 				<?php the_post_thumbnail('thumbnail') ?>
 				<div class="description">
-					<h5><?php the_title()?></h5>
+					<h6><?php the_title()?></h6>
 					<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. </p>
 					<span class="ico-calendar"><?php the_time('d/M/Y') ?></span>
 					<?php the_category() ?>
-				</div>			
+				</div>
+				<div class="mask">
+					<a href="<?php the_permalink() ?>"><h5 class="ico-link title-mask">Ler a notícia</h5></a>
+				</div>
 			</div>
 
 			<?php endwhile ?>
@@ -88,16 +92,16 @@
 					</div>
 				</article>
 			<?php endif; ?>
-			
 		</article>
 
 		<!-- Vídeos Box -->
 		<article class="box-videos colunm-3">
+		<h5 class="ico-tv-pref title-tvpref">Tv Prefeitura</h5>
 			<!-- Função que faz a chamada dos posts -->
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
 			<!-- Dados do post -->
-			<div class="news">
-				<h4><a href="<?php the_permalink() ?>"><?php the_title()?></a></h4>
+			<div class="preview-video">
+				<?php the_post_thumbnail('medium') ?>
 				<div class="description">
 					<span>Postado por: <?php the_author() ?> em <?php the_time('d/M/Y') ?></span>
 					<span><?php comments_popup_link('Sem comentários', '1 Comentário', '% Comentários', 'comments-link', ''); ?></span>
@@ -121,10 +125,11 @@
 
 		<!-- Mural de recados -->
 		<article class="mural-recados colunm-3">
+		<h5 class="ico-mural title-mural">Mural de Recados</h5>
 			<!-- Função que faz a chamada dos posts -->
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
 			<!-- Dados do post -->
-			<div class="news">
+			<div class="message-posts">
 				<h4><a href="<?php the_permalink() ?>"><?php the_title()?></a></h4>
 				<div class="description">
 					<span>Postado por: <?php the_author() ?> em <?php the_time('d/M/Y') ?></span>
@@ -153,8 +158,9 @@
 	</main>
 
 
-<!-- Corpo do site PS: a tag <body> já foi aberta no header -->
-
+<!-- Bibliotecas Javascript -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="http://localhost/wp/wp-content/themes/Portal Prefeitura/js/events.js"></script>
 <!-- Chamada da sidebar e footer -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

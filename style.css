@@ -8,6 +8,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700); /*Titulos*/
 @import url(https://fonts.googleapis.com/css?family=Poppins); /*Paragrafos*/
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:700); /*Menu*/
+@import url(https://fonts.googleapis.com/css?family=Muli); /*Menu - teste*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 
 /*-- Import ico - Tributes for ico-Free Fonts, thanks! :) --*/
@@ -22,15 +24,15 @@
 .ico-search:before{ content: '\e986'; padding: .5% 1% .5% 0; }
 
 /*--- Icones #Secão-2*/
-.ico-news:before{ content: '\e904'; padding-left: 1%;}
 .ico-calendar:before{ content: '\e953'; padding: 1%}
-
-.ico-tv-pref:before{ content: '\e914'; padding: 1%;}
-.ico-playtv:before{ content: '\e912'; padding: 1% }
-
-.ico-mural:before{ content: '\e91a'; padding: 1%;}
 .ico-expand:before{ content: '\e989'; padding: 2%}
 .ico-link:before{ content: '\e9cb'; padding: 2%; display: block;}
+.ico-playtv:before{ content: '\e912'; padding: 1% }
+
+.ico-news:after{ content: '\e904'; padding-left: 1%;}
+.ico-tv-pref:after{ content: '\e914'; padding: 1%;}
+.ico-mural:after{ content: '\e91a'; padding: 1%;}
+
 
 
 /*--- Definições Globais ---*/
@@ -43,10 +45,14 @@ h1, h2, h3, h4, h5, h6{
  p, span, blockquote, input, textarea{
  	font-family: 'Poppins', 'ico', sans-serif;
  }
-ol, ul, li, a, i, button{
+ol, ul, li, i, button{
 	font-family: 'Montserrat', 'ico', sans-serif;
 	font-style: normal;
 } 
+
+a{ 
+	font-family: 'Open Sans', 'ico', sans-serif;
+}
 
 @media(min-width: 1200px){
 	/*--- Definições de font-size ---*/
@@ -189,7 +195,7 @@ ol, ul, li, a, i, button{
 	/*---- Início da seção2 */
 
 	section#secao-2{
-		background: #FFF8FD;
+		background: rgba(243, 240, 249, 1);
 		width: auto;
 		height: 100vh;
 	}
@@ -203,6 +209,40 @@ ol, ul, li, a, i, button{
 
 	section#secao-2 p{ font-size: .8em; }
 	section#secao-2 span, ul li{ font-size: .6em;}
+
+/*--- Menu */
+	section#secao-2 nav.main-menu{
+		background: rgba(30, 134, 125, 1);
+		width: 100%;
+		height: 8%;
+		border-bottom: 3px solid rgba(22, 97, 91, 1)
+	}
+	section#secao-2 nav.main-menu ul.menu li{
+		padding: 1% 1.5% 1% 1.5%;
+		line-height: 1.5;
+		display: inline;
+		transition: .5s all;
+	}
+	section#secao-2 nav.main-menu ul.menu li:hover{
+		background: rgba(71, 156, 149, 1);
+		overflow: hidden;
+	}
+	section#secao-2 nav.main-menu ul.menu li a{
+		font-size: 2em;
+		color: rgba(235, 244, 243, 1);
+		text-decoration: none;		
+	}
+	/*-- Submenu */
+	section#secao-2 nav.main-menu ul.menu li ul.sub-menu{
+		background: rgba(138, 192, 188, 1);
+		margin-top: 1%;
+		position: relative;
+		display: none;
+	}
+	section#secao-2 nav.main-menu ul.menu li ul.sub-menu li{
+		direction: block;
+		margin-top: 2%;
+	}
 
 /*--- Box-Noticias #news */
 	section#secao-2 article.box-noticias, .box-videos, .mural-recados{

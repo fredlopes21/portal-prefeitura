@@ -62,6 +62,11 @@
 
 	<!-- Corpo do site  -->
 	<section id="secao-2" class="grid-1">
+		<nav class="main-menu">
+			<?php wp_nav_menu( array(
+				'menu' => 'menu principal'
+			) ); ?>
+		</nav>
 		<!-- Notícias Box -->
 		<article class="box-noticias colunm-3">
 		<h5 class="ico-news title-news">Notícias</h5>

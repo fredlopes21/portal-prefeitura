@@ -34,3 +34,20 @@
 		})
 	})
 }) ();
+
+// Menu - #secao-2
+(function appearSubmenu () {
+	$("#secao-2 li.menu-item").hover(function () {
+		$(this).find("ul.sub-menu").css({
+			'display' : 'block'
+		})
+	})
+}) ();
+
+(function desappearSubmenu () {
+	$("#secao-2 li.menu-item").mouseleave(function () {
+		$(this).find("ul.sub-menu").css({
+			'display' : 'none'
+		})
+	})
+}) ();

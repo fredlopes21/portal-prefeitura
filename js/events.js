@@ -2,16 +2,15 @@
 (function getMask(){
 	$("div.news").hover(function (){
 		$(this).find($("div.mask")).css({
-			'display' : "block",
-			'top' : "0"
+			'opacity' : "1"
 		})
 	})
 }) ();
-(function displaMask(){
+(function displayMask(){
 	$("div.news").mouseleave(function (){
 		$(this).find($("div.mask")).css({
-			'top' : '-100%',
-			'display' : "none"
+			'opacity' : '0'
+
 		})
 	})
 }) ();
@@ -39,7 +38,7 @@
 (function appearSubmenu () {
 	$("#secao-2 li.menu-item").hover(function () {
 		$(this).find("ul.sub-menu").css({
-			'display' : 'block'
+			'opacity' : '1'
 		})
 	})
 }) ();
@@ -47,7 +46,7 @@
 (function desappearSubmenu () {
 	$("#secao-2 li.menu-item").mouseleave(function () {
 		$(this).find("ul.sub-menu").css({
-			'display' : 'none'
+			'opacity' : '0'
 		})
 	})
 }) ();

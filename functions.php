@@ -17,8 +17,11 @@ if (function_exists('register_sidebar')) {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 1200, 9999 );
-
+;	
+	if ( function_exists( 'add_theme_support' ) ) {
+		add_theme_support( 'post-thumbnails' );
+		set_post_thumbnail_size( 650, 250, true ); // Tamanho da largura das imagens.
+	}
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments

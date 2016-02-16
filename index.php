@@ -67,6 +67,7 @@
 				'menu' => 'menu principal'
 			) ); ?>
 		</nav>
+		
 		<!-- Notícias Box -->
 		<article class="box-noticias colunm-3">
 		<h5 class="ico-news title-news">Notícias</h5>
@@ -83,7 +84,7 @@
 					<?php the_category() ?>
 				</div>
 				<div class="mask">
-					<a href="<?php the_permalink() ?>"><h5 class="ico-link title-mask">Ler a notícia</h5></a>
+					<a href="<?php the_permalink() ?>"><h5 class="ico-read-more title-mask">Ler a notícia</h5></a>
 				</div>
 			</div>
 
@@ -132,18 +133,20 @@
 
 		<!-- Mural de recados -->
 		<article class="mural-recados colunm-3">
+		<div class="timeline"></div>
 		<h5 class="ico-mural title-mural">Mural de Recados</h5>
 			<!-- Função que faz a chamada dos posts -->
+			<?php query_posts('showposts=2') ?>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
 			<!-- Dados do post -->
 			<div class="message-posts">
-				<h4><a href="<?php the_permalink() ?>"><?php the_title()?></a></h4>
-				<div class="description">
+				<h4><?php the_title()?></h4>
+				<p><?php the_excerpt(); ?></p>
+				<footer>
 					<span>Postado por: <?php the_author() ?> em <?php the_time('d/M/Y') ?></span>
 					<span><?php comments_popup_link('Sem comentários', '1 Comentário', '% Comentários', 'comments-link', ''); ?></span>
 					<span><?php edit_post_link(('Editar')); ?></span>
-					<p><?php the_excerpt(); ?></p>
-				</div>			
+				</footer>
 			</div>
 
 			<?php endwhile ?>

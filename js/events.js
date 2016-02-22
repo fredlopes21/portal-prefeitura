@@ -20,6 +20,8 @@
 	$("div.preview-video").hover(function () {
 		$(this).find($('img')).css({
 			'transform' : 'scale(1.2)',
+			'-webkit-filter' : 'blur(2px)',
+			'filter' : 'blur(2px)',
 			'transition' : '.5s ease-out'
 		})
 	})
@@ -29,6 +31,8 @@
 	$("div.preview-video").mouseleave(function () {
 		$(this).find($('img')).css({
 			'transform' : 'scale(1)',
+			'webkit-filter' : 'grayscale(10%)',
+			'filter' : 'grayscale(10%)',
 			'transition' : '.3s ease-out'
 		})
 	})

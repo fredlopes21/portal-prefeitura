@@ -1,8 +1,6 @@
 /*Ficheiro onde fica o stylesheet do tema*/
 
-/* Import */
-@import url(http://localhost/wp/wp-content/themes/Portal%20Prefeitura/css/reset.css);
-@import url(http://localhost/wp/wp-content/themes/Portal%20Prefeitura/css/grids/grid-izzy.css);
+
 
 /*--- Fontes ---*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700); /*Titulos*/
@@ -22,6 +20,7 @@
 
 /*--- Icones */
 .ico-search:before{ content: '\e986'; padding: .5% 1% .5% 0; }
+.ico-menu:before{ content: '\e9bd'; padding: 1%; font-size: 3em; }
 
 /*--- Icones #Secão-2*/
 .ico-calendar:before{ content: '\e953'; padding: 1%}
@@ -34,7 +33,30 @@
 .ico-tv-pref:before{ content: '\e95b'; padding: 1%;}
 .ico-mural:before{ content: '\e91a'; padding: 1%;}
 
+/*--- Icones #secao-3 */
+.ico-cidadao:before{ content: '\e9de'; padding: 1%; }
+.ico-empresa:before{content: '\e903'; padding: 1%;}
+.ico-download:before{content: '\e933'; padding: 1%;}
 
+.ico-casa:before{content: '\e902'; padding: 1%; display: block; font-size: 2em;}
+.ico-direito:before{content: '\e91f'; padding: 1%; display: block; font-size: 2em;}
+.ico-saude:before{content: '\e998'; padding: 1%; display: block; font-size: 2em;}
+.ico-meio-ambiente:before{content: '\e9a4'; padding: 1%; display: block; font-size: 2em;}
+.ico-documentos:before{content: '\e920'; padding: 1%; display: block; font-size: 2em;}
+.ico-rel-internacional:before{content: '\e9c9'; padding: 1%; display: block; font-size: 2em;}
+.ico-transporte:before{content: '\e9b0'; padding: 1%; display: block; font-size: 2em;}
+.ico-rec-naturais:before{content: '\e9ca'; padding: 1%; display: block; font-size: 2em;}
+.ico-trabalho:before{content: '\e995'; padding: 1%; display: block; font-size: 2em;}
+.ico-educacao:before{content: '\e921'; padding: 1%; display: block; font-size: 2em;}
+.ico-seguranca:before{content: '\e98f'; padding: 1%; display: block; font-size: 2em;}
+.ico-cultura:before{content: '\e9d9'; padding: 1%; display: block; font-size: 2em;}
+.ico-receita:before{content: '\e93b'; padding: 1%; display: block; font-size: 2em;}
+.ico-comunidade:before{content: '\e972'; padding: 1%; display: block; font-size: 2em;}
+.ico-tecnologia:before{content: '\e91b'; padding: 1%; display: block; font-size: 2em;}
+.ico-esporte:before{content: '\e9b2'; padding: 1%; display: block; font-size: 2em;}
+.ico-investimento:before{content: '\e940'; padding: 1%; display: block; font-size: 2em;}
+.ico-licitacoes:before{content: '\e92c'; padding: 1%; display: block; font-size: 2em;}
+.ico-registro-comercial:before{content: '\e930'; padding: 1%; display: block; font-size: 2em;}
 
 /*--- Definições Globais ---*/
 /*html, body{
@@ -53,6 +75,36 @@ ol, ul, li, i, button{
 
 a{ 
 	font-family: 'Open Sans', 'ico', sans-serif;
+}
+
+/*--- Menu-fixo nas seções ---*/
+.btn-menu-fixo{
+	width: 100%;
+	height: 10%;
+	text-align: center;
+	opacity: .5;
+	transition: .5s all;
+}
+.btn-menu-fixo:hover{
+	opacity: 1;
+}
+.btn-menu-fixo div.globe{
+	background: red;
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	line-height: 1.4;
+}
+
+nav.dsp-menu-none{
+	background: black;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 @media(min-width: 1200px){
@@ -105,7 +157,6 @@ a{
 
 	header.principal div.cabecalho{
 		/*background: rgba(0, 73, 75, 1);*/
-		widows: 100%;
 		height: 30%;
 	}
 
@@ -155,7 +206,7 @@ a{
 	/*---- Menu principal */
 	header nav.main-menu {
 		background: rgba(33, 114, 107, 1);
-		width: 100%;
+		
 		height: 10%;
 	}
 	header nav.main-menu li {
@@ -174,7 +225,6 @@ a{
 
 	/*---- Slider */
 	header.principal div.slider-main{
-		width: 100%;
 		height: 50%;
 		overflow: hidden;
 	}
@@ -264,23 +314,22 @@ a{
 	section#secao-2 article.box-noticias .title-news{
 		width: 100%;
 		color: rgba(212, 29, 55, .9);
-		
 		text-align: left;
 		padding: 1%;
 		border-bottom: 2px solid rgba(212, 29, 55, .9)
 	}
 	section#secao-2 article.box-noticias div.news{
-		background: rgba(255, 255, 255, .9);
+		background: rgba(255, 255, 255, .3);
 		width: 95%;
 		height: 17%;
 		margin: 1% 0 1% 2.5%;
-		border: 2px solid rgba(255, 255, 255, 1);
+
 		border-radius: 5px;
 		transition: .5s all;
 	}
-	div.news:hover{
+	section#secao-2 article.box-noticias div.news:hover{
 		box-shadow: 1px 1px 5px rgba(43, 45, 66, .5);
-		border: none;
+
 	}
 	section#secao-2 article.box-noticias div.news div.mask{
 		background: rgba(0, 0, 0, .9);
@@ -294,8 +343,8 @@ a{
 		transition: .5s all;
 	}
 	section#secao-2 article.box-noticias div.news div.mask .title-mask{
-		width: 102%;
-		height: 102%;
+		width: 100%;
+		height: 100%;
 		color: rgba(255, 255, 255, .9);
 		text-align: center;
 		padding-top: 5%;
@@ -314,6 +363,10 @@ a{
 	section#secao-2 article.box-noticias div.news div.description{
 		width: 65%;
 		float: right;
+		color: rgba(29, 44, 55, .9);
+		padding: 1%;
+	}
+	section#secao-2 article.box-noticias div.news div.description h6{
 		padding: 1%;
 	}
 	section#secao-2 article.box-noticias div.news div.description span{
@@ -337,22 +390,29 @@ a{
 		color: rgba(0, 0, 0, .8);
 	}
 	section#secao-2 article.box-videos div.preview-video{
-		width: 98%;
-		height: 30%;
-		margin: 1%;
+		width: 95%;
+		height: 28%;
+		margin: 1% 2.5% 1% 2.5%;
+		border: 2px solid rgba(255, 255, 255, .9);
+		border-radius: 5px;
 		overflow: hidden;
+		transition: .5 all;
 	}
+	section#secao-2 article.box-videos div.preview-video:hover{
+		box-shadow: 2px 2px 5px rgba(43, 45, 66, .5);
+	}
+
 	section#secao-2 article.box-videos div.preview-video img{
 		width: 100%;
 		height: 100%;
-		border: 2px solid rgba(56, 88, 154, .2);
 		float: left;
+		filter: grayscale(10%);
+		-webkit-filter: grayscale(10%) ;
 	}
 	section#secao-2 article.box-videos div.preview-video div.description{
-		background: rgba(0, 0, 0, .5);
+		background: rgba(0, 0, 0, 0);
 		width: 100%;
 		height: 100%;
-		box-shadow: 10px 10px 10px blur black;
 		position: relative;
 	}
 	section#secao-2 article.box-videos div.preview-video div.description h5{
@@ -373,6 +433,7 @@ a{
 	section#secao-2 article.box-videos div.preview-video div.description i{
 		width: 100%;
 		font-size: 4em;
+		color: rgba(255, 255, 255, .9);
 		text-align: center;
 		position: absolute;
 		top: 25%;
@@ -402,21 +463,22 @@ a{
 		display: none;
 	}
 	section#secao-2 article.mural-recados div.message-posts{
-		background: rgba(255, 44, 0, .9);
+		background: rgba(255, 255, 255, .3);
 		width: 90%;
-		height: 40%;
+		height: 60%;
 		margin: 1% 5% 1% 5%;
 		border: 2px solid rgba(141, 153, 174, .2);
-		border-radius: 10px;
-		box-shadow: 1px 1px 10px rgba(141, 153, 174, .2);
+		border-radius: 5px;
+		/*box-shadow: 1px 1px 10px rgba(141, 153, 174, .2);*/
 	}
 
-	section#secao-2 article.mural-recados div.message-posts h4{
+	section#secao-2 article.mural-recados div.message-posts h6{
 		text-align: center;
-		padding: 2%;
+		padding: 1%;
 	}
 
 	section#secao-2 article.mural-recados div.message-posts p{
+		font-size: 1.2em;
 		padding: 2%;
 	}
 
@@ -428,5 +490,177 @@ a{
 		padding: 1%;
 		margin-left: 5%;
 		border-top: 2px solid rgba(0, 0, 0, .2);
+	}
+
+	/* Fim da #secao-2 ----*/
+
+	/*---- Início da #secao-3 */
+
+	section#secao-3{
+		background: rgba(255, 255, 255, 1);
+		height: 100vh;
+	}
+
+	/*--- Definições de font-size ---*/
+	section#secao-3 h1{font-size: 3.2em; color: #474855;}
+	section#secao-3 h2{font-size: 2.7em; color: #474855;}
+	section#secao-3 h3{font-size: 2.3em; color: #474855;}
+	section#secao-3 h4{font-size: 1.8em; color: #474855;}
+	section#secao-3 h5{font-size: 1.5em; color: #474855;}
+	section#secao-3 h6{font-size: 1.2em; color: #474855;}
+
+	section#secao-3 nav.main-menu{
+		background: rgba(0, 0, 0, .2);
+		width: 100%;
+		height: 8%;
+	}
+
+	section#secao-3 div.main-panel{
+		height: 60%;
+		margin-top: 1%;
+		float: left;
+	}
+
+	/*--- Cidadão */
+	section#secao-3 div.main-panel div.cidadao ul.grade-cidadao{
+		width: 95%;
+		height: 100%;
+		margin: 1% 2.5% 1% 2.5%;
+	}
+	section#secao-3 div.main-panel div.cidadao ul.grade-cidadao li{
+		background: rgba();
+		width: 24%;
+		height: 100px;
+		margin: .1%;
+		float: left;
+		font-size: .9em;
+		text-align: center;
+		line-height: 1.5;
+		border: 1px solid black;
+	}
+
+	/*--- Empresa */
+	section#secao-3 div.main-panel div.empresa ul.grade-empresa{
+		width: 95%;
+		height: 100%;
+		margin: 1% 2.5% 1% 2.5%;
+	}
+	section#secao-3 div.main-panel div.empresa ul.grade-empresa li{
+		background: rgba();
+		width: 24%;
+		height: 100px;
+		margin: .1%;
+		float: left;
+		font-size: .9em;
+		text-align: center;
+		line-height: 1.5;
+		border: 1px solid black;
+	}
+
+	/*--- Links Uteis*/
+	section#secao-3 div.links-uteis{
+		height: 60%;
+		margin-top: 1%;
+	}
+	section#secao-3 div.links-uteis ul.items-link{
+		width: 100%;
+		height: 100%;
+		margin-top: 1%;
+	}
+	section#secao-3 div.links-uteis ul.items-link a{
+		text-decoration: none;
+	}
+	section#secao-3 div.links-uteis ul.items-link li{
+		width: 90%;
+		height: 10%;
+		border: 1px solid black;
+		margin: 1% 0 0 5%;
+		font-size: .9em;
+		text-align: center;
+		line-height: 2;
+	}
+
+	/*--- Transparencia */
+	section#secao-3 div.transparencia{
+		width: 90%;
+		height: 15%;
+		margin-left: 5%;
+	}
+	section#secao-3 div.transparencia ul.items-trans{
+		width: 100%;
+	}
+	section#secao-3 div.transparencia ul.items-trans li{
+		width: 96%;
+		height: 80px;
+		margin: 2% 0 2% 0;
+		padding: 0 0 0 2%;
+		font-size: 1em;
+		text-align: center;
+		line-height: 2;
+		border: 1px solid black;
+	}
+	/* Fim da #secao-3 ----*/
+
+	/*---- Início da #secao-4 */
+	section#secao-4{
+		height: 100vh;
+	}
+	section#secao-4 h1{font-size: 3.2em; color: #474855;}
+	section#secao-4 h2{font-size: 2.7em; color: #474855;}
+	section#secao-4 h3{font-size: 2.3em; color: #474855;}
+	section#secao-4 h4{font-size: 1.8em; color: #474855;}
+	section#secao-4 h5{font-size: 1.5em; color: #474855;}
+	section#secao-4 h6{font-size: 1.2em; color: #474855;}
+
+	section#secao-4 span{font-size: .8em; color: #474855;}
+
+	section#secao-4 article.infos{
+	}
+
+	section#secao-4 article.infos div.details span{
+		width: 100%;
+		padding: .5%;
+		display: block;
+	}
+
+	section#secao-4 div article.infos img{
+		border: 2px solid black;
+	}
+
+	/*--- Fale com a prefeitura */
+	section#secao-4 div article.form form input{
+		width: 90%;
+		height: 3em;
+	}
+
+	section#secao-4 div article.form form textarea{
+		width: 90%;
+		height: 20em;
+	}
+	/*--- Contato Secretarias */
+	section#secao-4 div.cont-sec span{
+		width: 90%;
+		height: 3em;
+		display: block;
+		font-size: 1em;
+		text-align: center;
+		line-height: 2.9;
+		margin: 1%;
+		border: 1px solid black;
+	}
+	/*--- Botões ---*/
+
+	.btn-main{
+		width: 50%;
+		height: 4em;
+		float: left;
+	}
+	.enviar{
+		background: rgba(0, 164, 122, .8);
+		color: rgba(0, 131, 110, .9);
+	}
+	.cancelar{
+		background: rgba(134, 48, 48, .8);
+		color: rgba(110, 49, 51, .9);
 	}
 }

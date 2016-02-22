@@ -10,9 +10,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>" charset="<?php bloginfo('charset'); ?>" />
 	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<!-- Grids e reset css -->
-	<link rel="stylesheet" type="text/css" href="/wp-content/themes/Portal Prefeitura/css/grids/grid-izzy.css">
-	<link rel="stylesheet" type="text/css" href="/wp-content/themes/Portal Prefeitura/css/reset.css">
+	<!-- grds e reset css -->
+	<link rel="stylesheet" type="text/css" href="wp-content/themes/Portal Prefeitura/css/grids/grid-izzy.css">
+	<link rel="stylesheet" type="text/css" href="wp-content/themes/Portal Prefeitura/css/reset.css">
 
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="stylesheet" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -22,5 +22,5 @@
 
 	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );  wp_head(); ?>
 </head>
-<body>
+<body class="container">
 	

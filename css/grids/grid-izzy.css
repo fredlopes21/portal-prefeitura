@@ -1,226 +1,104 @@
 /* --------------------------------
 	-Sistema de grids IzzyWeb  
 	-Autor: Joanez Andrades
-	-12/08/2015 
------------------------------------ */
-.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6{
-	float: left;
-}
+	-12/08/2015
 
-.grid-1{
+----------------------------------- */
+
+.container{
 	width: 100%;
 }
-.grid-2{
-	width: 49.5%;
-	margin-left: .5%;
+
+/*--- Grades ---
+	*As grades foram divididas em 10x100;
+	*Não temos margens entre as grades;
+	*O objetivo das grades é separar o conteúdo sem perda de espaço;
+	*A ideia principal das grades é usá-las como container para as colunas;
+*/
+.grd-100, 
+.grd-90, 
+.grd-80,
+.grd-70,
+.grd-60,
+.grd-50,
+.grd-40,
+.grd-30,
+.grd-20,
+.grd-10{
+	float: left;
+	display: inline;
 }
-.grid-3{
-	width: 32.8333333%;
-	margin-left: .5%;
+.grd-100{width: 100%;}
+.grd-90{width: 90%;}
+.grd-80{width: 80%;}
+.grd-70{width: 70%;}
+.grd-60{width: 60%;}
+.grd-50{width: 50%;}
+.grd-40{width: 40%;}
+.grd-30{width: 30%;}
+.grd-20{width: 20%;}
+.grd-10{width: 10%;}
+
+
+/*--- Colunas ---
+	*As colunas foram divididas em 10x100;
+	*Cada coluna tem .25% dos 100% de margem na direita e na esquerda;
+	*Essa margem, obviamente, é .25% do tamanho da tag PAI;
+	*O tamanho de cada coluna debita essa margem;
+*/
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10{
+	float: left;
+	display: inline;
+	margin-left: .25%;
+	margin-right: .25%;
 }
-.grid-4{
+
+.col-1{
+	width: 99.5%;
+}
+
+.col-2{
+	width: 49.5%
+}
+
+.col-3{
+	width: 32.8%;
+}
+
+.col-4{
 	width: 24.5%;
-	margin-left: .5%;
 }
-.grid-5{
+
+.col-5{
 	width: 19.5%;
-	margin-left: .5%;
-}
-.grid-6{
-	width: 16.1666667%;
-	margin-left: .5%;
 }
 
-/*Max-Width 480px*/
-@media(max-width: 480px){
-	.container{
-		width: 100%;
-		margin: 0 auto;
-	}
-	.colunm-1,
-	.colunm-2,
-	.colunm-3,
-	.colunm-4,
-	.colunm-5,
-	.colunm-6,
-	.colunm-7,
-	.colunm-8,
-	.colunm-9,
-	.colunm-10,
-	.colunm-11,
-	.colunm-12 {
-		width: 100%;
-		float: left;
-	}
+.col-6{
+	width: 16.16%;
 }
 
-/*Min-Width 480px*/
-@media(min-width: 480px){
-	.container{
-		width: 100%;
-		margin: 0 auto;
-	}
-	.colunm-1,
-	.colunm-3,
-	.colunm-4,
-	.colunm-5,
-	.colunm-6,
-	.colunm-7,
-	.colunm-8,
-	.colunm-9,
-	.colunm-10,
-	.colunm-11,
-	.colunm-12 {
-		width: 100%;
-		float: left;
-	}
-	.colunm-2 {
-		width: 50%;
-		float: left;
-	}
+.col-7{
+	width: 13.78%;
 }
 
-/*Min-Width 768px*/
-@media(min-width: 768px){
-	.container{
-		width: 100%;
-		margin: 0 auto;
-	}
-	.colunm-1,
-	.colunm-6,
-	.colunm-7,
-	.colunm-8,
-	.colunm-9,
-	.colunm-10,
-	.colunm-11,
-	.colunm-12{
-		width: 100%;
-		float: left; 
-	}
-	.colunm-2{
-		width: 50%;
-		float: left;
-	}
-	.colunm-3{
-		width: 33.3333333%;
-		float: left;
-	}
-	.colunm-4{
-		width: 25%;
-		float: left;
-	}
-	.colunm-5{
-		width: 20%;
-		float: left;
-	}	
+.col-8{
+	width: 12%;
 }
 
-/*Min-Width 1024*/
-@media(min-width: 1024px){
-	.container{
-		width: 100%;
-		margin: 0 auto;
-	}
-	.colunm-1{
-		width: 100%;
-		float: left;
-	}
-	.colunm-2{
-		width: 50%;
-		float: left;
-	}
-	.colunm-3{
-		width: 33.3333333%;
-		float: left;
-	}
-	.colunm-4{
-		width: 25%;
-		float: left;
-	}
-	.colunm-5{
-		width: 20%;
-		float: left;
-	}
-	.colunm-6{
-		width: 16.6666667%;
-		float: left;
-	}
-	.colunm-7{
-		width: 14.2857143%;
-		float: left;
-	}
-	.colunm-8{
-		width: 12.5%;
-		float: left;
-	}
-	.colunm-9{
-		width: 11.1111111%;
-		float: left;
-	}
-	.colunm-10,
-	.colunm-11,
-	.colunm-12{
-		width: 10%;
-		float: left;
-	}
-
+.col-9{
+	width: 10.6%;
 }
 
-/*Min-Width 1366px*/
-@media(min-width: 1366px){
-	
-	.container{
-		width: 100%;
-		margin: 0 auto; 
-	}
-	.colunm-1{
-		width: 100%;
-		float: left;
-	}
-	.colunm-2{
-		width: 50%;
-		float: left;
-	}
-	.colunm-3{
-		width: 33.3333333%;
-		float: left;
-	}
-	.colunm-4{
-		width: 25%;
-		float: left;
-	}
-	.colunm-5{
-		width: 20%;
-		float: left;
-	}
-	.colunm-6{
-		width: 16.6666667%;
-		float: left;
-	}
-	.colunm-7{
-		width: 14.2857143%;
-		float: left;
-	}
-	.colunm-8{
-		width: 12.5%;
-		float: left;
-	}
-	.colunm-9{
-		width: 11.1111111%;
-		float: left;
-	}
-	.colunm-10{
-		width: 10%;
-		float: left;
-	}
-	.colunm-11{
-		width: 9.09090909%;
-		float: left;
-	}
-	.colunm-12{
-		width: 8.33333333%;
-		float: left;
-	}
-
-	
+.col-10{
+	width: 9.5%;
 }

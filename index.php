@@ -3,6 +3,23 @@
 	<?php get_header(); ?>
 
 	<header class="principal">
+	<!-- Botão Chama menu -->
+		<div id="get-menu" class="btn-menu-fixo grd-10">
+			<div class="globe">
+				<i class="ico-menu"></i>
+			</div>
+		</div>
+	<!-- Menu principal -->
+		<nav class="main-menu grd-20">
+			<div id="close-menu">
+				<i class="ico-close"></i>
+			</div>
+			<h4>Menu</h4>
+			<?php wp_nav_menu( array(
+				'menu' => 'main-menu'
+			) ); ?>
+		</nav>
+
 	<!-- Menu de acesso rápido -->
 		<nav class="fast-access">
 			<?php wp_nav_menu( array(
@@ -25,13 +42,7 @@
 			</div>
 		</div>
 		
-		<!-- Menu principal -->
-		<nav class="main-menu  grd-100">
-			<?php wp_nav_menu( array(
-				'menu' => 'main-menu'
-			) ); ?>
-		</nav>
-
+		
 		
 		<!-- Slider -->
 		<div class="slider-main grd-100">
@@ -63,13 +74,6 @@
 
 	<!-- Ínicio da #secao-2  -->
 	<section id="secao-2" class="grd-100">
-
-		<!-- Menu Fixo -->
-		<div class="btn-menu-fixo">
-			<div class="globe">
-				<i class="ico-menu"></i>
-			</div>
-		</div>
 
 		<!-- Notícias Box -->
 		<article class="box-noticias col-3">
@@ -167,12 +171,6 @@
 	</section> <!-- Fim da #secao-2 -->
 
 	<section id="secao-3" class="grd-100">
-		<!-- Menu Fixo -->
-		<div class="btn-menu-fixo">
-			<div class="globe">
-				<i class="ico-menu"></i>
-			</div>
-		</div>
 
 		<div class="main-panel grd-80">
 			<div class="col-2 cidadao">
@@ -248,12 +246,7 @@
 
 	<!-- Ínicio da #secao-4 -->
 	<section id="secao-4" class="grd-100">
-		<!-- Menu Fixo -->
-		<div class="btn-menu-fixo">
-			<div class="globe">
-				<i class="ico-menu"></i>
-			</div>
-		</div>
+
 		<div class="grd-80">
 			<article class="col-2 infos">
 				<h5>Prefeitura Municipal de Santa Lúcia-PR</h5>

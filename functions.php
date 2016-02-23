@@ -51,5 +51,10 @@ if (function_exists('register_sidebar')) {
 		'audio',
 		'chat',
 	) );
-
+	/*
+	*
+	* Tirar a barra de admin, apenas para produção
+	*
+	*/
+	add_filter('show_admin_bar', '__return_false');
 ?>

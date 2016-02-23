@@ -19,8 +19,13 @@
 }
 
 /*--- Icones */
-.ico-search:before{ content: '\e986'; padding: .5% 1% .5% 0; }
-.ico-menu:before{ content: '\e9bd'; padding: 1%; font-size: 3em; }
+.ico-search:before{content: '\e986'; padding: .5% 1% .5% 0;}
+.ico-menu:before{content: '\e9bd'; padding: 1%; font-size: 4em;}
+.ico-close:before{content: '\ea0f'; padding: 15%; font-size: 4em;}
+
+/*--- Seta sub-menu*/
+ul.sub-menu li:first-child:before{content: '\ea40'; padding: 1%; display: inline;}
+
 
 /*--- Icones #Secão-2*/
 .ico-calendar:before{ content: '\e953'; padding: 1%}
@@ -79,21 +84,33 @@ a{
 
 /*--- Menu-fixo nas seções ---*/
 .btn-menu-fixo{
-	width: 100%;
 	height: 10%;
 	text-align: center;
 	opacity: .5;
+	position: fixed;
+	cursor: pointer;
 	transition: .5s all;
+	z-index: 99;
 }
 .btn-menu-fixo:hover{
 	opacity: 1;
 }
 .btn-menu-fixo div.globe{
-	background: red;
-	width: 65px;
-	height: 65px;
-	border-radius: 50%;
-	line-height: 1.4;
+	background: rgba(0, 12, 18, 1);
+	width: 90px;
+	height: 80px;
+	color: rgba(255, 255, 255, 1);
+	line-height: 1.3;
+}
+#close-menu{
+	background: rgba(0, 12, 18, .8);
+	width: 90px;
+	height: 80px;
+	line-height: 1.3;
+	color: rgba(255, 51, 51, 1);
+	cursor: pointer;
+	position: absolute;
+	right: -90px;
 }
 
 nav.dsp-menu-none{
@@ -128,7 +145,7 @@ nav.dsp-menu-none{
 		background: #EEE8F4;
 		margin: 0 auto;
 		width: 100%;
-		height: 7%;
+		height: 10%;
 		border-bottom: 2px solid #D3D1C4;
 	}
 	nav.fast-access ul.menu{
@@ -154,6 +171,53 @@ nav.dsp-menu-none{
 		display: none;
 	}
 	/*-------------------------------- Fim do Menu de acesso rápido*/
+
+	/*---- Menu principal */
+	nav.main-menu {
+		background: rgba(0, 12, 18, 1);
+		height: 100%;
+		position: absolute;
+		color: rgba(255, 255, 255, .9);
+		z-index: 99;
+		left: -100%;
+		transition: .5s all;
+	}
+	nav.main-menu ul.menu{
+		margin-top: 5%;
+	}
+	nav.main-menu ul.menu li.menu-item{
+		width: 90%;
+		height: 4em;
+		line-height: 1.5;
+		margin: .5% 0 .5% 2%;
+		padding: 2%;
+		border-bottom: 2px solid rgba(255, 255, 255, .2);
+		display: block;
+	}
+	nav.main-menu ul.menu li.menu-item a{
+		width: 100%;
+		color: rgba(238, 232, 244, 1);
+		font-size: 2.5em;
+		text-decoration: none;
+	}
+
+	/*-- Sub-menu */
+	nav.main-menu li ul.sub-menu{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		right: -100%;
+		top: 8%;
+		opacity: 0;
+		transition: .5s all;
+	}
+
+	nav.main-menu li ul.sub-menu li:first-child{
+		margin-bottom: 1%;
+		font-size: 2em;
+	}
+/*----- Fim do menu principal */
+
 
 	header.principal div.cabecalho{
 		/*background: rgba(0, 73, 75, 1);*/
@@ -203,26 +267,6 @@ nav.dsp-menu-none{
 		float: right;
 	}
 
-	/*---- Menu principal */
-	header nav.main-menu {
-		background: rgba(33, 114, 107, 1);
-		
-		height: 10%;
-	}
-	header nav.main-menu li {
-		margin: 0;
-	}
-	header nav.main-menu li a{
-		color: rgba(238, 232, 244, .5);
-		font-size: 1.8em;
-		padding: 2%;
-		float: left;
-		text-decoration: none;
-	}
-	header nav.main-menu li ul.sub-menu{
-		display: none;
-	}
-
 	/*---- Slider */
 	header.principal div.slider-main{
 		height: 50%;
@@ -261,49 +305,7 @@ nav.dsp-menu-none{
 	section#secao-2 p{ font-size: .8em; }
 	section#secao-2 span, ul li{ font-size: .6em;}
 
-/*--- Menu */
-	section#secao-2 nav.main-menu{
-		background: rgba(30, 134, 125, 1);
-		width: 100%;
-		height: 8%;
-		border-bottom: 3px solid rgba(22, 97, 91, 1);
-	}
-	section#secao-2 nav.main-menu ul.menu li{
-		padding: 1% 1.5% 1% 1.5%;
-		margin: 0 .5% 0 .5%;
-		line-height: 1.5;
-		display: inline-block;
-		transition: .5s all;
-	}
-	section#secao-2 nav.main-menu ul.menu li:hover{
-		background: rgba(71, 156, 149, 1);
-	}
-	section#secao-2 nav.main-menu ul.menu li a{
-		font-size: 2em;
-		color: rgba(235, 244, 243, 1);
-		text-decoration: none;		
-	}
-	/*-- Submenu */
-	section#secao-2 nav.main-menu ul.menu li ul.sub-menu{
-		background: #8D99AE;
-		width: 10%;
-		margin-top: 1.2%;
-		margin-left: -2%;
-		position: absolute;
-		opacity: 0;
-		transition: 0.5s linear 0s normal;
-	}
-	section#secao-2 nav.main-menu ul.menu li ul.sub-menu li{
-		height: 4em;
-		display: block;
-		margin-top: 2%;
-	}
-	section#secao-2 nav.main-menu ul.menu li ul.sub-menu li a{
-		padding: 2%;
 
-		width: 100%;
-		font-size: 2em;
-	}
 /*------ Boxes #secao-2 */
 	section#secao-2 article.box-noticias, .box-videos, .mural-recados{
 		height: 85%;

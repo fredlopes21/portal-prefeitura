@@ -1,3 +1,45 @@
+// Menu Principal - Chamada do menu
+(function getMainMenu() {
+	$("#get-menu").click(function () {
+		$("nav.main-menu").css({
+			'left' : '0'
+		})
+	})
+}) ();
+
+//Menu Principal - Esconder o menu
+(function closeMainMenu() {
+	$("#close-menu").click(function () {
+		$("nav.main-menu").css({
+			'left' : '-100%'
+		})
+	})
+}) ();
+
+//Menu Principal - chamada submenu;
+(function getSubMenu () {
+	$("li.menu-item-has-children").click(function (event) {
+		event.preventDefault();
+		$(this).find($('ul.sub-menu')).css({
+			'background' : 'black',
+			'right' : '0',
+			'opacity' : '1'
+		})
+	})
+
+}) ();
+
+// Menu Principal - Esconder Submenu
+(function closeSubMenu () {
+	$("ul.sub-menu li:first-child").click(function (event) {
+		event.preventDefault();
+		$(this).closest('ul.sub-menu').css({
+			'right' : '-100%',
+			'opacity' : '0'
+		})
+	})
+}) ();
+
 // Notícias
 (function getMask(){
 	$("div.news").hover(function (){

@@ -14,7 +14,7 @@
 			<div id="close-menu">
 				<i class="ico-close"></i>
 			</div>
-			<h4>Menu</h4>
+			<h4 class="title-menu">Menu</h4>
 			<?php wp_nav_menu( array(
 				'menu' => 'main-menu'
 			) ); ?>

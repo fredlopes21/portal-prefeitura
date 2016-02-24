@@ -21,9 +21,8 @@
 	$("li.menu-item-has-children").click(function (event) {
 		event.preventDefault();
 		$(this).find($('ul.sub-menu')).css({
-			'background' : 'black',
-			'right' : '0',
-			'opacity' : '1'
+			'left' : '0',
+			'z-index' : '99'
 		})
 	})
 
@@ -31,12 +30,12 @@
 
 // Menu Principal - Esconder Submenu
 (function closeSubMenu () {
-	$("ul.sub-menu li:first-child").click(function (event) {
+	$("ul.sub-menu > li:first-child").click(function (event) {
 		event.preventDefault();
-		$(this).closest('ul.sub-menu').css({
-			'right' : '-100%',
-			'opacity' : '0'
+		$('nav.main-menu').find($('ul.sub-menu')).css({
+			'left' : '-100%'
 		})
+		console.log('essa porra ta funcionando!')
 	})
 }) ();
 

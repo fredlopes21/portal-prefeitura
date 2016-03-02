@@ -4,6 +4,12 @@
 		$("nav.main-menu").css({
 			'left' : '0'
 		})
+		$("#get-menu").css({
+			'display' : 'none'
+		})
+		$("#close-menu").css({
+			'display' : 'block'
+		})
 	})
 }) ();
 
@@ -12,6 +18,12 @@
 	$("#close-menu").click(function () {
 		$("nav.main-menu").css({
 			'left' : '-100%'
+		})
+		$("#close-menu").css({
+			'display' : 'none'
+		})
+		$("#get-menu").css({
+			'display' : 'block'
 		})
 	})
 }) ();
@@ -32,7 +44,7 @@
 (function closeSubMenu () {
 	$("ul.sub-menu > li:first-child").click(function (event) {
 		event.preventDefault();
-		$('nav.main-menu').find($('ul.sub-menu')).css({
+		$('html').find($('ul.sub-menu')).css({
 			'left' : '-100%'
 		})
 		console.log('essa porra ta funcionando!')

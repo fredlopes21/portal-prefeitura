@@ -1,0 +1,12 @@
+Configuração de cores do website: 
+Vamos separar estas configurações em três grupos: Quanto à sintaxe, quanto à semântica e quanto à sintaxe conceitual;
+
+SINTAXE: Neste grupo o uso da cor se refer a princípios de organização e classificação. É quando usamos a cor com a função de hierarquização, classificação, ou organização das informações. Também para destacar e direcionar a leitura, entre outras possibilidades. 
+
+--Hierarquizar: Uma forma de hierarquizar é atribuir um peso visual ao elemento mais importante. Você pode fazer isso segregando e diferenciando um elemento através do contraste entre as core da interface.
+
+--Destacar: A função de destacar pode ser muito útil para qualquer tipo de página que tenha uma chama para ação(Call to action). O intuito é atingir conversões, tipo vendas ou cadastros.
+
+--Organizar: Você pode unificar elementos através da semelhança ou proximidade.
+
+--Classificar: Alguns portais de como IG, fazem uso das cores para categorizar elementos, ou, seções do site, mas sem alterar a sua estrutura e identidade. Isso contribui para que o usuário não se sinta perdido ou imagine que saiu do site.

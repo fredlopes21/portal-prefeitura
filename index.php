@@ -24,7 +24,7 @@
 			<div class="col-3 logo">
 				<img src="http://localhost/wp/wp-content/uploads/2016/02/santalucia.png" class="col-3">	
 				<h2 class="title"><?php bloginfo('name') ?></h2>
-				<span><?php bloginfo('description') ?></span>
+				<p class="sub-title"><?php bloginfo('description') ?></p>
 			</div>
 			<div class="col-3 search-top">
 				<input placeholder="Faça sua busca" <?php the_search_query(); ?> />
@@ -38,6 +38,8 @@
 		
 		
 		<!-- Slider -->
+
+		<h4 class="title-destaque"><i class="fa fa-photo"></i>Destaques</h4>
 		<div class="slider-main">
 			<ul class="slider-body">
 			<!-- Função que faz a chamada dos posts -->
@@ -48,8 +50,8 @@
 					<div class="description">
 					<a href="<?php the_permalink() ?>">
 						<h1 class="slider-title"><?php the_title() ?></h1>
+						<span><i class="fa fa-calendar"></i><?php the_time('d/M/Y') ?></span>
 						<p class="slider-preview" <?php the_excerpt() ?>></p>
-						<span><?php the_time('d/M/Y') ?></span>
 					</div>
 					</a>
 				</li>			

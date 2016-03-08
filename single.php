@@ -9,6 +9,7 @@
 			<h1><a href="<?php the_permalink() ?>"><?php the_title()?></a></h1>
 			<div class="description">
 				<span>Postado por: <?php the_author() ?> em <?php the_time('d/M/Y') ?></span>
+				<?php the_category() ?>
 				<span><?php comments_popup_link('Sem comentários', '1 Comentário', '% Comentários', 'comments-link', ''); ?></span>
 				<span><?php edit_post_link(('Editar')); ?></span>
 				<span><?php the_content(); ?></span>

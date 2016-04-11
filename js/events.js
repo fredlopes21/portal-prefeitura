@@ -51,19 +51,83 @@
 	})
 }) ();
 
-// Notícias
-(function getMask(){
-	$("div.news").hover(function (){
-		$(this).find($("div.mask")).css({
-			'opacity' : "1"
+// Slider
+(function btnSlider() {
+	$("#prev-sld").click(function(){
+		$('html').find($('ul.slider-body')).css({
+			'left' : '-100%'
+		})
+	})
+	$("#next-sld").click(function(){
+		$('html').find($('ul.slider-body')).css({
+			'left' : '100%'
 		})
 	})
 }) ();
-(function displayMask(){
-	$("div.news").mouseleave(function (){
-		$(this).find($("div.mask")).css({
-			'opacity' : '0'
 
+(function blurHover() {
+	$(".description-slider").mouseenter(function() {
+		console.log("Sim, está aqui");
+		$("ul.slider-body").find($('img')).css({
+			'-webkit-filter' : 'blur(5px)',
+			'-moz-filter' : 'blur(5px)',
+			'filter': 'blur(5px)'
+		})
+	})
+
+	$(".description-slider").mouseleave(function(){
+		$("ul.slider-body").find($('img')).css({
+			'-webkit-filter' : 'blur(0px)',
+			'-moz-filter' : 'blur(0px)',
+			'filter': 'blur(0px)'
+		})
+	})
+}) ();
+
+(function rollPage(){
+	$("li.menu-item a").click(function(event){
+		event.preventDefault();
+		var IdElemento = $(this).attr('href');
+		var deslocamento = $(IdElemento).offset().top;
+		$('html, body').animate({scrollTop: deslocamento}, 'slow');
+	});
+}) ();
+
+(function parallax(){
+	$(document).ready(function(){
+		$('section.parallax').each(function(){
+			var $obj = $(this);
+
+			$(window).scroll(function(){
+				var yPos = -($(window).scrollTop() / $obj.data('speed'));
+
+				var bgPos = '50%'+yPos+'px';
+
+				$obj.css('background-position', bgPos)
+
+			});
+		});
+	});
+}) ();
+
+// Notícias
+(function grayscaleOff(){
+	$("div.news").hover(function (){
+		$(this).find($("img")).css({
+			'filter' : "sepia(100%)",
+			'-webkit-filter' : "sepia(100%)"
+		});
+		$(this).find($("div.choice-action span")).css({
+			'opacity' : '1'
+		})
+	})
+	$("div.news").mouseleave(function (){
+		$(this).find($("img")).css({
+			'filter' : 'sepia(0)',
+			'-webkit-filter' : 'sepia(0)'
+		});
+		$(this).find($("div.choice-action span")).css({
+			'opacity' : '0'
 		})
 	})
 }) ();
@@ -73,8 +137,6 @@
 	$("div.preview-video").hover(function () {
 		$(this).find($('img')).css({
 			'transform' : 'scale(1.2)',
-			'-webkit-filter' : 'blur(2px)',
-			'filter' : 'blur(2px)',
 			'transition' : '.5s ease-out'
 		})
 	})
@@ -84,8 +146,6 @@
 	$("div.preview-video").mouseleave(function () {
 		$(this).find($('img')).css({
 			'transform' : 'scale(1)',
-			'webkit-filter' : 'grayscale(10%)',
-			'filter' : 'grayscale(10%)',
 			'transition' : '.3s ease-out'
 		})
 	})

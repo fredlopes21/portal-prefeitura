@@ -2,46 +2,45 @@
 	
 	Chamada do header -->
 	<?php get_header(); ?>
-	<main class="content">
+	<section id="content-archives" class="grd-90">
 		<?php $post = $posts[0]; ?> <!-- Hack. Seta o $post para que o the_date() funcione  -->
 			<!-- Arquivos por categoria -->
 			<?php if (is_category()) { ?>
-				<p>Arquivo da Categoria: <?php echo single_cat_title(); ?></p>
+				<h2 class="title-color">Arquivos listados na categoria: <strong><?php single_cat_title(); ?></strong></h2>
 
 			<!-- Arquivos por dia -->
 			<?php } elseif(is_day()) { ?>
-				<p>Arquivo de: <?php the_time('j de F de Y'); ?></p>
+				<h2 class="title-color">Arquivo de: <strong><?php the_time('j de F de Y'); ?></strong></h2>
 
 			<!-- Arquivos por Mês -->
 			<?php } elseif(is_month()) { ?>
-				<p>Arquivo de: <?php the_time('F de Y'); ?></p>
+				<h2 class="title-color">Arquivo de: <?php the_time('F de Y'); ?></h2>
 
 			<!-- Arquivos por ano -->
 			<?php } elseif(is_year()) { ?>
-				<p>Arquivo de: <?php the_time('Y'); ?></p>
+				<h2 class="title-color">Arquivo de: <?php the_time('Y'); ?></h2>
 
 			<!-- Arquivos por Autor -->
 			<?php } elseif(is_author()) { ?>
-				<p>Arquivo do Autor</p>
+				<h2 class="title-color">Arquivo do Autor</h2>
 
 			<!-- se houver paginação -->
 			<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged']))  { ?>
-				<p>Arquivo do Blog</p>
+				<h2 class="title-color">Arquivo do Blog</h2>
 			<?php } ?>
 
-		<!-- Função que faz a chamada dos posts -->
+		<!-- Função que faz o loop nos posts -->
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
 
 		<!-- Dados do post -->
-		<article class="post">
-			<h2><a href="<?php the_permalink() ?>"><?php the_title()?></a></h2>
+		<article class="archive col-5">
+			<a href="<?php the_permalink() ?>"><h6><?php the_title()?></h6></a>
+			<?php the_post_thumbnail('medium') ?>
 			<div class="description">
-				<span>Postado por: <?php the_author() ?> em <?php the_time('d/M/Y') ?></span>
-				<span><?php comments_popup_link('Sem comentários', '1 Comentário', '% Comentários', 'comments-link', ''); ?></span>
-				<span><?php edit_post_link(('Editar')); ?></span>
-				<span><?php the_content(); ?></span>
+				<span><i class="fa fa-user"></i><?php the_author() ?></span>
+				<span><i class="fa fa-calendar"></i><?php the_time('d/M/Y') ?></span>
 			</div>
-
+		</article>
 			<?php endwhile ?>
 			<?php else: ?>
 				<!-- Senão - Mostra quando não existem posts -->
@@ -53,12 +52,12 @@
 					</div>
 				</article>
 			<?php endif; ?>
-		</article>
+		
 		<div class="navegacao">
 			<span class="recentes"><?php next_posts_link('&laquo; Artigos Anteriores') ?></span>
 			<span class="anteriores"><?php previous_posts_link('Artigos Recentes &raquo;') ?></span>
 		</div>
-	</main>
+	</section>
 
 
 <!-- Corpo do site PS: a tag <body> já foi aberta no header -->

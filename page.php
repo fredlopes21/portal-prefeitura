@@ -1,17 +1,12 @@
-<!--Código do corpo da page -->
-	<!-- Chamada do header -->
 	<?php get_header(); ?>
-	<section id="content-page" class="grd-90">
+	<section id="page-content" class="grd-90">
 		<!-- Função que faz a chamada dos posts -->
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
 		<!-- Dados do post -->
 		<article class="page-post">
-			<h2 class="title-color"><?php the_title()?></h2>
-			<div class="description">
-				<span class="col-6"> <i class="fa fa-user"></i><?php the_author() ?></span>
-				<span class="col-6"> <i class="fa fa-calendar"></i><?php the_time('d/M/Y') ?></span>
-			</div>
-			<div class="post">
+			<h1 class="title-page"><?php the_title()?></h1>
+			<span class="date">Atualizado <?php the_time('d/M/Y') ?></span>
+			<div class="content">
 				<?php the_content(); ?>
 			</div>
 
@@ -28,5 +23,4 @@
 		</article>
 	</section>
 
-<!-- Chamada da sidebar e footer -->
 <?php get_footer(); ?>

@@ -1,0 +1,1922 @@
+// Fontes
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700) //Títulos 
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700) //Textos
+@import url(https://fonts.googleapis.com/css?family=Merriweather) //Teste/textos
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700) //Teste
+
+
+// #breakpoints
+$break-smartphone: 			360px
+$break-tablet:				610px
+$break-desktop:				1280px
+
+// #mixins
+@mixin smartphone
+	@media(max-width: 360px)
+		@content
+@mixin desktop
+	@media(min-width: 1280px)
+		@content
+
+// Paleta de cores
+$bg-default: 		   	#FEFEFE
+$bg-noticias: 			#f4f3ef
+$menu-fixed-bg:   	   	#00A859
+$border-date-authors:  	#068B3E
+$color-icons:		   	#FEFEFE
+$color-titles:			#6B809B
+$color-div-navslider:	#D2D3D5
+$color-nav-selected: 	#1BBEBC
+$bg-nav-contact: 		#982C48
+$text-color: 			#333333
+$height-default: 		100vh
+
+$bg-menu-secretarias:		rgba(0, 168, 89, .8)
+$bg-news-opacity: 			rgba(27, 190, 188, .2)
+$bg-tvpref-opacity: 		rgba(152, 44, 72, .2)
+$bg-btn-opacity:			rgba(107, 128, 155, .5)
+$bg-transparceria-opacity: 	rgba(210, 211, 213, .9)
+$bg-black-opacity: 			rgba(0, 0, 0, .3)
+
+// #bg-img
+$bg-transparencia-smartphone: url(http://izzyweb.com.br/public/img/btransparencia-smartphone.jpg) no-repeat fixed
+$bg-transparencia-dekstop: url(http://izzyweb.com.br/public/img/transparencia-desktop.jpg) no-repeat fixed
+
+
+// #fontfamily
+$title-font: 'Lato', sans-serif
+
+// #fontsize
+$title-post-size: 		3em
+$title-section-size: 	2.5em
+$title-notice:			1.8em
+$text-size: 			1.6em
+$text-medium: 			1.4em
+$text-small: 			1.2em
+$span-small: 			.8em
+
+$weight-normal: 400
+$weight-bold: 700
+
+// #paragraphs
+$text-paragraph-color: #6A6D75
+$text-font: 'Merriweather', sans-serif
+
+// #shadows
+$shadow-dark-primary: 4px 4px 4px #CCC
+
+$font-size-default: 62.5% 
+
+
+// #transitions
+$transition-one: .3s ease-in-out
+
+// End of variables
+
+
+
+// #global configuration
+html
+	background: $bg-default
+	font-size: $font-size-default
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font-family: $title-font
+	font-weight: $weight-bold
+	letter-spacing: 1px
+
+a
+	font-family: $title-font
+	text-decoration: none
+p,
+span,
+blockquote,
+ol,
+ul,
+li,
+input,
+textarea,
+select,
+button,
+figcaption
+	font-family: $title-font
+	text-decoration: none
+
+// botões
+.btn-main
+	width: 50%
+	height: 45px
+	float: left
+
+
+	.main-title
+		font-weight: $weight-bold
+		margin: 1%
+	.subtitle
+		font-weight: $weight-bold
+		font-size: 2.7em
+		margin: 1%
+	.text-paragraph
+		font-size: 1.6em
+		color: $text-paragraph-color
+		line-height: 1.6
+	span
+		color: $text-paragraph-color
+		font-size: 1.1em
+		line-height: 1.1
+
+// #header320px 
+#home
+	background: $menu-fixed-bg
+	border-bottom: 2px solid $border-date-authors
+	top: 0
+	position: fixed
+	z-index: 999
+
+	@include smartphone
+		height: 10vh
+
+	@include desktop
+		height: 90px
+
+	.cabecalho
+		height: 100%
+		@include desktop
+			width: 25%
+			margin-left: 5%
+			float: left
+		.logo
+			width: 70px
+			height: 70px
+			margin: 2%
+			float: left
+
+			.brasao
+				width: 100%
+				height: 100%
+				float: left
+		.title
+			font-size: $title-section-size
+			color: $color-icons
+
+			@include desktop
+				line-height: 3.2
+				display: inline
+	#get-menu,
+	#close-menu
+		@include smartphone
+			width: 55px
+			height: 55px
+			text-align: center
+			fill: $color-icons
+			top: 0
+			right: 0
+			position: fixed
+			z-index: 99
+		@include desktop
+			width: 55px
+			height: 55px
+			text-align: center
+			fill: $color-icons
+			top: 3%
+			right: 5%
+			position: fixed
+			z-index: 99
+			cursor: pointer
+
+		svg
+			@include smartphone
+				width: 40px
+				height: 40px
+				margin-top: 10%
+			@include desktop
+				width: 55px
+				height: 55px
+		.title
+			display: none
+	#close-menu
+		display: none
+
+	nav.fast-access
+		ul.menu
+			height: 100%
+		li.menu-item
+			height: 100%
+			padding: 0 4%
+			text-align: center
+			transition: .5 ease all
+
+		a
+			font-size: $text-size
+			font-weight: $weight-normal
+			color: $bg-nav-contact
+			line-height: 3
+		ul.sub-menu
+			position: relative
+			display: none
+
+
+	// #mainmenu
+	.title-menu
+		margin: 2% 0
+		font-size: $title-section-size
+		color: $bg-nav-contact
+		text-align: center
+
+	nav.main-menu
+		@include smartphone
+			background: $color-div-navslider
+			height: 100%
+			left: 100%
+			position: fixed
+			transition: .5s ease-in-out
+			z-index: 99
+		@include desktop
+			background: none
+			width: 50%
+			display: block
+			float: left
+
+		.title-menu
+			@include desktop
+				display: none
+
+		.navigation
+			@include desktop
+				width: 100%
+				height: 100%
+				position: relative
+
+			ul.menu
+				li.menu-item
+					width: 90%
+					height: 35px
+					margin-left: 5%
+					display: block
+					line-height: 2
+					border-bottom: 1px solid $bg-btn-opacity
+					cursor: pointer
+					@include desktop
+						width: 125px
+						height: 100%
+						text-align: center
+						margin: 4% 0 0 0
+						border: none
+						float: left
+
+					a
+						width: 90%
+						font-size: $text-size
+						color: $color-titles
+						padding: 2%
+						margin: .5% 2%
+						text-decoration: none
+						@include desktop
+							display: block
+							padding: none
+							margin: none
+							color: $color-icons
+		.secretarias
+			@include desktop
+				background: $menu-fixed-bg
+				height: 90%
+				top: 92px
+				right: 0
+				position: fixed
+				display: none
+				transition: .5s ease-in-out
+			.title
+				width: 100%
+				display: block
+				height: 50px
+				font-size: $title-section-size
+				color: $color-icons
+				text-align: center
+				text-transform: uppercase
+				line-height: 2
+			.menu-left-menu-container
+				.menu
+					@include desktop
+						width: 100%
+						height: 100%
+				.menu-item
+					@include desktop
+						width: 96%
+						height: 40px
+						font-size: $text-size
+						text-align: center
+						text-transform: uppercase
+						line-height: 2
+						margin: .5% 2%
+					a
+						color: $color-icons
+						transition: .3s ease-in-out
+						&:hover
+							color: $bg-nav-contact
+
+
+
+// fim do header
+#destaques
+	height: $height-default
+	margin: 0 5%
+	border-bottom: 1px solid $color-div-navslider
+	.bg-color
+		background: linear-gradient(to bottom, #1D976C , #93F9B9)
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: -9
+		display: none
+	.title-container
+		@include desktop
+			width: 50%
+			height: 50px
+			top: 15%
+			left: 10%
+			position: absolute
+		.title-section
+			@include desktop
+				font-size: $title-notice
+				color: $text-color
+				line-height: 2
+				text-transform: uppercase
+		.today
+			@include desktop
+				font-family: $title-font
+				font-size: $text-small
+				text-transform: uppercase
+				font-weight: $weight-bold
+				letter-spacing: 1px
+				color: $text-color
+			.hour
+				@include desktop
+					display: block
+
+	.wrapper-weather
+		@include smartphone
+			display: none
+		@include desktop
+			width: 10%
+			height: 80px
+			top: 12%
+			right: 5%
+			text-align: center
+			position: absolute
+
+			.hour
+				display: none
+		#get-weather
+			@include smartphone
+				display: none
+			@include desktop
+				fill: $color-titles
+				color: $color-titles
+				display: block
+				cursor: pointer
+				transition: $transition-one
+			&:hover
+				fill: $bg-nav-contact
+				color: $bg-nav-contact
+			svg
+				width: 80px
+				height: 80px
+			
+			.title
+				top: 85%
+				display: block
+				position: absolute
+		#close-weather
+			@include smartphone
+				display: none
+			@include desktop
+				display: none
+	// Widget Wheater
+	.widget-weather
+		@include smartphone
+			display: none
+		@include desktop
+			height: 80px
+			margin: 8% 5% 2% 5%
+			left: 30%
+			position: absolute
+		iframe
+
+			.nomP
+				display: none
+
+
+	// #slider
+
+
+	#slider
+		@include smartphone
+			width: 100%
+			height: 90vh
+			top: 10vh
+			position: fixed
+			overflow-x: hidden
+			overflow-y: hidden
+			z-index: -9
+		@include desktop
+			width: 100%
+			height: 580px
+			margin: 18% 0
+			z-index: -9
+			// box-shadow: 0px 0px 4px $color-div-navslider
+
+		ul.slider-body
+			@include smartphone
+				width: 500%
+				height: 100%
+				position: relative
+				margin: 0
+				left: 0
+			@include desktop
+				width: 90%
+				height: 500px
+				margin: 1% 5%
+				position: relative
+
+			.slider-item
+				@include smartphone
+					width: 20%
+					height: 100%
+					float: left
+					z-index: -9
+				@include desktop
+					width: 49%
+					margin: 0 .5%
+					box-shadow: 0px 0px 20px $color-div-navslider
+					float: left
+
+				img
+					@include desktop
+						width: 100%
+						height: 100%
+
+				figcaption
+					@include smartphone
+						background: $bg-default
+						height: 50%
+						position: relative
+					@include desktop
+						background: $bg-black-opacity
+						width: 100%
+						height: 100%
+						top: -100%
+						position: relative
+						transition: .4s ease-in-out
+					&:hover
+						box-shadow: inset 0px 0px 200px rgba(0, 0, 0, .5)
+
+					.date
+						@include smartphone
+							background: $border-date-authors
+							color: $color-icons
+							letter-spacing: 1px
+							text-align: center
+							line-height: 2
+							display: block
+							top: -5px
+							position: absolute
+						@include desktop
+							background: none
+							width: 90%
+							margin-left: 5%
+							top: 5%
+							display: block
+							color: $color-icons
+							line-height: 2
+							letter-spacing: 1px
+							text-align: center
+							text-transform: uppercase
+							position: absolute
+						svg
+							@include smartphone
+								fill: $color-icons
+								margin: .5% 1%
+								left: 30%
+								position: absolute
+
+							@include desktop
+								display: none
+
+					.slider-title
+						@include smartphone
+							width: 95%
+							height: 90%
+							font-size: $title-post-size
+							color: $color-titles
+							font-weight: $weight-normal
+							// text-shadow: 0px 0px 2px $secondary-text-color
+							text-align: center
+							margin: 2.5%
+						@include desktop
+							padding: 2%
+							font-size: $title-notice
+							color: $color-icons
+							text-align: center
+							text-transform: uppercase
+							line-height: $text-medium
+							margin-top: 60%
+							position: absolute
+			
+			.slider-item:first-child
+				@include desktop
+					height: 100%
+					display: block
+			.slider-item:nth-child(2),
+			.slider-item:nth-child(3)
+				@include desktop
+					height: 48%
+				.slider-title
+					margin-top: 20%
+			.slider-item:nth-child(3)
+				@include desktop
+					margin-top: 2%
+		#slider-control
+			background: none
+			width: 100%
+			height: 30px
+			top: 90%
+			padding-left: 25%
+			position: fixed
+
+			@include desktop
+				display: none
+
+			.ctrl-item
+				width: 18px
+				height: 18px
+				border: 2px solid $color-div-navslider
+				border-radius: 50%
+				margin: 5px
+				float: left
+			.current
+				background: $bg-nav-contact
+
+
+		#prev-sld,
+		#next-sld
+			display: none
+
+// fim do slider
+// Secão #noticias
+
+#noticias
+	background: $bg-noticias
+	height: $height-default
+	position: relative
+
+	.container
+		margin: 0 5%
+		height: 100%
+
+		.cabecalho
+			display: none
+
+		article:first-child
+			@include smartphone
+				height: 49%
+				margin: .5% 0
+			@include desktop
+				height: 60%
+				margin: 0
+		article:nth-child(2)
+			@include smartphone
+				height: 49%
+				margin: .5% 0
+			@include desktop
+				height: 30%
+				margin: 0
+
+		.title-container
+			@include desktop
+				width: 25%
+				height: 50px
+				margin: 1% 5%
+			.title-section
+				@include desktop
+					font-size: $title-notice
+					color: $text-color
+					line-height: 2
+					text-transform: uppercase
+			.today
+				@include desktop
+					font-family: $title-font
+					font-size: $text-small
+					text-transform: uppercase
+					font-weight: $weight-bold
+					letter-spacing: 1px
+					color: $text-color
+				.hour
+					@include desktop
+						display: block
+
+		.title-tvpref
+			@include smartphone
+				margin: 2%
+				padding: 1%
+				font-size: $title-section-size
+				text-align: center
+				color: $bg-nav-contact
+			@include desktop
+				width: 20%
+				height: 100%
+				font-size: $title-section-size
+				color: $bg-nav-contact
+				text-align: center
+				line-height: 5
+				margin-left: 5%
+				margin-bottom: 1.5%
+				padding-bottom: .5%
+				float: left
+				position: relative
+
+				i
+					@include smartphone
+						display: none
+					@include desktop
+						width:  100%
+						text-align: center
+						top: 40%
+						display:  block
+						position: absolute
+			.divider
+				@include smartphone
+					background: $bg-nav-contact
+					width: 45%
+					height: 2px
+					margin: 1% 24%
+					display: block
+					position: absolute
+				@include desktop
+					background: $bg-nav-contact
+					width: 25%
+					height: 2px
+					margin: .5% 37.5%
+					top: 35%
+					display: block
+					position: absolute
+
+		.box-noticias
+			@include smartphone
+				width: 90%
+				height: 70%
+				margin-left: 5%
+				box-shadow: 10px 10px 20px #BEBEBE
+				overflow-y: hidden
+				overflow-x: scroll
+			@include desktop
+				width: 100%
+				height: 80%
+				margin-left: 5%
+
+			// #news
+			.wrapper-news
+				@include smartphone
+					width: 505% !important
+					height: 100%
+				@include desktop
+					height: 100%
+
+				.news-cards
+					@include smartphone
+						width: 20%
+						height: 100%
+						margin: 0 
+					@include desktop
+						width: 20%
+						height: 90%
+						margin: 0 1%
+						box-shadow: 10px 10px 10px #BEBEBE
+						transition: .2s linear
+					img
+						@include smartphone
+							width: 100%
+							height: 100%
+						@include desktop
+							width:  100%
+							height: 50%
+
+					.read-more
+						display: none
+
+					.description-news
+						@include smartphone
+							background: $bg-news-opacity
+							width: 50%
+							height: 101%
+							top: -102%
+							float: right
+							position: relative
+						@include desktop
+							background: none
+							width: 100%
+							height: 45%
+							position: relative
+
+
+
+
+						.title
+							@include smartphone
+								width: 100%
+								height: auto
+								font-size: $text-size
+								text-align: center
+								color: $text-color
+								font-weight: $weight-normal
+								line-height: 1.6
+								margin: 0
+								top: 10%
+								position: absolute
+							@include desktop
+								width:  95%
+								height: auto
+								font-size: $text-size
+								text-align:  center
+								color: $text-color
+								font-weight: $weight-normal
+								line-height: $text-medium
+								margin: 0 2.5%
+								position: absolute						
+						.divider
+							@include smartphone
+								background: $color-div-navslider
+								width: 80%
+								height: 2px
+								margin: 1% 10%
+								bottom: 30px
+								position: absolute
+							@include desktop
+								background: $color-div-navslider
+								width: 80%
+								height: 1px
+								margin: 0 10%
+								bottom: 30px
+								position: absolute
+						.date
+							@include smartphone
+								width: 100%
+								color: $color-icons
+								fill: $color-icons
+								text-align: center
+								letter-spacing: 1px
+								margin: 1%
+								bottom: 10px
+								position: absolute
+							@include desktop
+								width: 100%
+								color: $text-color
+								fill: $text-color
+								text-align: center
+								letter-spacing: 1px
+								margin: 0
+								bottom: 10px
+								position: absolute
+							i
+								margin: 1%
+						.author
+							display: none
+					&:hover
+						box-shadow: 0px 0px 10px #BEBEBE
+				.fa
+					margin: 2%
+
+		#slider-control-news
+			@include smartphone
+				background: none
+				width: 38%
+				height: 30px
+				top: 10px
+				left: 34%
+				position: relative
+			@include desktop
+				display:  none
+
+			.ctrl-item
+				width: 10px
+				height: 10px
+				border: 2px solid $color-div-navslider
+				border-radius: 50%
+				margin: 5px
+				float: left
+			.current
+				background: $color-nav-selected
+		#slider-control-tvpref
+			@include smartphone
+				background: none
+				width: 24%
+				height: 30px
+				left: 39.5%
+				position: relative
+			@include desktop
+				display: none
+
+
+			.ctrl-item
+				width: 10px
+				height: 10px
+				border: 2px solid $color-div-navslider
+				border-radius: 50%
+				margin: 5px
+				float: left
+
+			.current
+				background: $bg-nav-contact
+
+		// #tvpref
+		.box-tv-prefeitura
+			@include smartphone
+				width: 90%
+				height: 70%
+				margin-left: 5%
+				box-shadow: 10px 10px 20px #BEBEBE
+				overflow-y: hidden
+				overflow-x: scroll
+			@include desktop
+				width: 67%
+				height: 100%
+				margin-left: 30%
+
+			.tv-pref
+				@include smartphone
+					width: 505% !important
+					height: 100%
+				@include desktop
+					width: 100% !important
+					height: 100%
+
+				.wrapper-video
+					@include smartphone
+						width: 20%
+						height: 100%
+						margin: 0 
+					@include desktop
+						width: 45%
+						height: 100%
+						margin: 0 1%
+						position: relative
+						box-shadow: 10px 10px 10px #BEBEBE
+						transition: .2s linear
+					img
+						@include smartphone
+							width: 100%
+							height: 100%
+						@include desktop
+							width:  100%
+							height: 100%
+
+					a
+						width: 100%
+						color: $bg-nav-contact
+						text-align: center
+						top: 10px
+					
+					.description-tvpref
+						@include smartphone
+							background: $bg-tvpref-opacity
+							width: 50%
+							height: 101%
+							top: -102%
+							float: right
+							position: relative
+						@include desktop
+							// background: $bg-tvpref-opacity
+							width: 50%
+							height: 100%
+							top: 0
+							float: left
+							position: absolute
+
+						
+						.title
+							@include smartphone
+								font-size: $title-notice
+								text-align: center
+								color: $color-icons
+								padding: 1%
+								display: block
+							@include desktop
+								font-size: $title-notice
+								text-align: left
+								color: $color-icons
+								top: 25%
+								margin: 2%
+								padding: 1%
+								display: block
+								position: absolute
+								text-shadow: 1px 0px 2px $text-color
+								border-bottom: 1px solid 
+						.play
+							@include smartphone
+								width: 100%
+								text-align: center
+								fill: $bg-nav-contact
+								top: 35%
+								left: 100%
+								position: absolute
+							@include desktop
+								text-align: center
+								fill: $color-icons
+								top: 35%
+								left: 130%
+								position: absolute
+
+						.date
+							width: 100%
+							color: $color-icons
+							fill: $color-icons
+							text-align: left
+							font-weight: $weight-normal
+							letter-spacing: 1px
+							bottom: 10px
+							left: 5%
+							position: absolute
+
+							i
+								margin: 0 2%
+
+						.author
+							display: none
+					&:hover
+						@include desktop
+							box-shadow: 0px 0px 10px #BEBEBE
+	
+// Fim da seção de noticias
+// Secão #transparencia
+#transparencia
+	@include smartphone
+		background: $bg-transparencia-smartphone
+		height: $height-default
+	@include desktop
+		background: $bg-transparencia-dekstop
+		height: $height-default
+		position: relative
+	
+	.back-color
+		background: rgba(0, 0, 0, .2)
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: 9
+
+	.title-container
+		@include desktop
+			width: 20%
+			height: 50px
+			margin: 1% 5%
+		.title-section
+			@include desktop
+				font-size: $title-notice
+				color: $color-icons
+				line-height: 2
+				text-transform: uppercase
+		.today
+			@include desktop
+				font-family: $title-font
+				font-size: $text-small
+				text-transform: uppercase
+				font-weight: $weight-bold
+				letter-spacing: 1px
+				color: $color-icons
+			.hour
+				@include desktop
+					display: block
+
+	.btn-boxes-mobile
+		@include smartphone
+			width: 100%
+			height: 50vh
+			margin: auto
+		@include desktop
+			display: none
+
+		.title
+			font-size: $text-size
+			text-align: center
+			color: $color-icons
+			font-weight: $weight-normal
+			line-height: 1.6
+			border-bottom: 1px solid $color-div-navslider
+			display: none
+
+		.btn-box
+			background: $bg-btn-opacity
+			width: 130px
+			height: 120px
+			margin: 1% 4%
+			border: 2px solid $color-div-navslider
+			text-align: center
+			float: left
+
+		.title-box
+			font-size: $text-size
+			color: $color-icons
+			margin-top: 20%
+			display: block
+		i
+			fill: $color-icons
+
+	.box-links
+		width: 90%
+		height: 30vh
+		margin: 5%
+		overflow: scroll
+		display: none
+		.title
+			font-size: $text-size
+			color: $bg-nav-contact
+			text-align: center
+			margin-bottom: 2%
+			display: block
+		.content-links
+			width: 100%
+			height: 100%
+
+			.link-item
+				width: 100%
+				height: 30px
+				font-size: $text-size
+				line-height: 1.5
+
+				a
+					width: 100%
+					height: 100%
+					border-bottom: 1px dashed black
+
+	.main-panel
+		height: 55%
+		margin-left: 5%
+
+		.box
+			height: 100%
+			.wrapper-edital,
+			.wrapper-licitacoes,
+			.wrapper-decretos,
+			.wrapper-transp
+				@include smartphone
+					display: none
+				@include desktop
+					background: $color-icons
+					width: 95%
+					height: 100%
+					margin: 0 2.5%
+					position: relative
+					opacity: .9
+					transition: .2s linear
+
+				.wrapper-filter
+					@include smartphone
+						width: 100%
+						bottom: 10px
+						position: absolute
+					@include desktop
+						width: 100%
+						bottom: 10px
+						position: absolute
+
+					#filter
+						@include smartphone
+							background: none
+							width: 99%
+							padding: 1%
+							font-size: $text-small
+							color: #7E7E7E
+							border: none
+						@include desktop
+							background: $color-icons
+							width: 90%
+							padding: 1% 2%
+							margin: 1% 3%
+							font-size: $text-medium
+							color: $text-color
+							text-transform: uppercase
+							border: 1px solid $color-div-navslider
+					#options-filter
+						transition: .2s ease-in-out
+				&:hover
+					@include desktop
+						opacity: 1
+				.cabecalho
+					background: $color-icons
+					width: 100%
+					height: 55px
+					border-bottom: 1px solid $color-div-navslider
+
+					.title
+						@include smartphone
+							color: #fff
+							text-align: left
+							line-height: 1.5
+							padding: .5% 2%
+							display: block
+						@include desktop
+							font-size: $title-notice
+							color: $bg-nav-contact
+							text-align: center
+							text-transform: uppercase
+							font-weight: $weight-normal
+							padding: 1% 2%
+							margin-bottom: 2%
+							display:  block
+							position: relative
+						#question
+							@include smartphone
+								font-size: $text-small
+								color: #fff
+								top: 12%
+								right: 5%
+								position: absolute
+								cursor: pointer
+							@include desktop
+								display: none
+					.description
+						@include smartphone
+							display: none
+						@include desktop
+							width: 100%
+							height: 20px
+							position: relative
+
+						.resumo
+							top: 15%
+							left: 5%
+							position: absolute
+							color: $text-color
+							font-size: $span-small
+							font-style: italic
+							text-transform: uppercase
+							line-height: 2.5
+						.calendar
+							top: 15%
+							right: 10%
+							position: absolute
+
+							i
+								fill: $text-color
+				.divider
+					background: $color-icons
+					width: 95%
+					height: 1px
+					margin: 2% 2.5%
+					display: block
+				.content-list,
+				#compradireta,
+				#concorrencia,
+				#concursos,
+				#convite,
+				#leilao,
+				#pregao,
+				#processodedispensa,
+				#processodeinegibilidade,
+				#rdc,
+				#tomadadeprecos
+					@include desktop
+						width: 95%
+						height: 80%
+						margin: 1% 2.5% 
+						position: relative
+
+					.link-item
+						@include desktop
+							width: 100%
+							height: 25px
+							font-size: $text-small
+							color: $text-color
+							line-height: 2
+							margin-bottom: 2%
+							border-bottom: 1px solid $color-div-navslider
+
+						.date
+							font-size: $span-small
+							padding-left: 2%
+							border-left: 1px solid $color-div-navslider
+							float: right
+					.pac-ghost
+						@include desktop
+							width: 100%
+							display: block
+							text-align: center
+							margin: 5% 0
+							top: 25%
+							position: absolute
+					.title-404
+						@include desktop
+							font-size: $text-size
+							color: $text-color
+							text-align: center
+							top: 45%
+							position: absolute
+
+				#compradireta,
+				#concorrencia,
+				#concursos,
+				#convite,
+				#leilao,
+				#pregao,
+				#processodedispensa,
+				#processodeinegibilidade,
+				#rdc,
+				#tomadadeprecos
+					@include desktop
+						display: none
+	.proposta-eletronica
+		@include smartphone
+			display: none
+		@include desktop
+			height: 25%
+			margin: 2% 5% 1% 5%
+		.content
+			position: relative
+			.box-title
+				height: 100%
+
+				.title
+					width: 100%
+					display: block
+					font-size: $title-section-size
+					color: $color-icons
+					text-align: center
+					line-height: 1.5
+				.divider
+					background: $color-icons
+					width: 50%
+					height: 1px
+					margin: 2% 25%
+					display: block
+				i
+					width: 100%
+					display: block
+					text-align: center
+					fill: $color-icons
+			.description
+				height: 100%
+
+				p
+					width: 95%
+					font-size: $text-small
+					color: $color-icons
+					line-height: 1.5
+					margin: 2.5%
+		.download
+			height: 100%
+			position: relative
+
+			.wrapper-download
+				background: $bg-transparceria-opacity
+				width: 45%
+				height: 100%
+				margin: 0 2.5%
+				float: left
+				position: relative
+
+				.title
+					font-size: $title-notice
+					color: $bg-nav-contact
+					text-align: center
+					margin: 4% 0
+					display: block
+
+				p
+					font-size: $text-medium
+					color: $bg-nav-contact
+					text-align: center
+					margin: 2% 0
+					display: block
+				i
+					width: 100%
+					fill: $bg-nav-contact
+					text-align: center
+					margin: 10% 0
+					display: block
+
+
+// Fim secão de tranparência
+// Seção #contato
+
+#contato
+	@include smartphone
+		background: $color-div-navslider
+		height: $height-default
+
+	@include desktop
+		background: $bg-noticias
+		height: $height-default
+		position: relative
+
+	.title-container
+		@include desktop
+			width: 20%
+			height: 50px
+			margin: 1% 5%
+		.title-section
+			@include desktop
+				font-size: $title-notice
+				color: $text-color
+				line-height: 2
+				text-transform: uppercase
+		.today
+			@include desktop
+				font-family: $title-font
+				font-size: $text-small
+				text-transform: uppercase
+				font-weight: $weight-bold
+				letter-spacing: 1px
+				color: $text-color
+			.hour
+				@include desktop
+					display: block
+
+	.wrapper-contato
+		@include smartphone
+			height: auto
+		@include desktop
+			margin: 2% 5%
+		.form
+			@include smartphone
+				width: 100%
+				height: 50%
+				float: none
+			@include desktop
+				height: auto
+
+			.title
+				@include smartphone
+					font-size: $text-size
+					font-weight: $weight-normal
+					text-align: center
+					color: $color-titles
+				@include desktop
+					font-size: $text-size
+					text-align: left
+					color: $color-titles
+					margin-left: 5%
+					margin-bottom: 2%
+					display: block
+				.divider
+					@include smartphone
+						display: none
+					@include desktop
+						background: $color-titles
+						width: 180px
+						height: 1px
+						margin-top: 1%
+						display: block
+
+			input
+				@include smartphone
+					background: rgba(44, 62, 80, .1)
+					width: 87%
+					margin: 1% 5%
+					font-size: $text-size
+					color: black
+					padding: 2% 0 2% 2%
+					border: none
+					border-bottom: 2px solid rgba(44, 62, 80,.2)
+				@include desktop
+					background: none
+					width: 87%
+					height: 35px 
+					margin: 1% 5%
+					padding-left: 2%
+					border: none
+					color: $color-titles
+					text-transform: uppercase
+					box-shadow: 4px 4px 2px $color-div-navslider
+			textarea
+				@include smartphone
+					background: rgba(44, 62, 80, .1)
+					width: 87%
+					height: 5em
+					margin: 1% 5%
+					padding: 1%
+					border: none
+					border-bottom: 2px solid rgba(44, 62, 80,.2)
+				@include desktop
+					background: none
+					width: 87%
+					height: 100px
+					margin: 1% 5%
+					padding-left: 2%
+					border: none
+					color: $color-titles
+					text-transform: uppercase
+					box-shadow: 4px 4px 2px $color-div-navslider
+			::placeholder
+				color: $color-titles
+
+			.btn-enviar
+				@include desktop
+					background: none
+					width: 150px
+					height: 45px
+					margin: 0 5%
+					border: 5px solid $menu-fixed-bg
+					font-size: $text-medium
+					color: $border-date-authors
+					text-transform: uppercase
+			.btn-cancelar
+				@include desktop
+					background: none
+					width: 130px
+					height: 45px
+					border: 4px solid $bg-nav-contact
+					font-size: $text-medium
+					color: $bg-nav-contact
+					text-transform: uppercase
+	.endereco
+		@include smartphone
+			display: none
+		@include desktop
+			display: inline-block
+		.title
+			width: 150px
+			height: 50px
+			font-size: $text-size
+			color: $color-titles
+			text-align: center
+			display: block
+			position: relative
+			float: left
+
+			.divider
+				background: $color-titles
+				width: 1px
+				height: 25px
+				top: 7px
+				right: 0
+				position: absolute
+				display: block
+		.wrapper-rotas
+			width: 73%
+			height: 50px
+			float: right
+
+			.cidade
+				display: block
+				font-size: 1em
+				text-align: center
+				text-transform: uppercase
+				line-height: 1.2
+			.divider
+				display: block
+				text-align: center
+		iframe
+			margin: 1% 0
+	.plugin-fb-page
+		background: none
+		width: 95%
+		height: 100px
+		margin: 15% 2.5%
+		display: none
+
+
+	.contact-menu
+		@include smartphone
+			background: $bg-nav-contact
+			width: 100%
+			height: 45px
+			margin-top: 120px
+		@include desktop
+			display:  none
+
+		.menu
+			width: 100%
+			height: 100%
+
+			.menu-item
+				width: 33%
+				text-align: center
+				float: left
+				color: $color-icons
+				fill: $color-icons
+
+				h2
+					margin: 5%
+
+				svg
+					margin: 0 auto
+					display: block
+				span
+					color: $color-icons
+	
+// Fim da seção de contato
+// Secão #rodape
+#rodape
+	@include smartphone
+		background: $border-date-authors
+		height: auto
+		color: $color-icons
+		text-transform: uppercase
+	@include desktop
+		background: $border-date-authors
+		height: auto
+		color: $color-icons
+		text-transform: uppercase
+	.container
+		margin: 1% 5%
+		.izzyweb
+			width: auto
+			height: auto
+			margin: 5% auto
+			display: block
+		.box-atendimento,
+		.box-endereco,
+		.box-apoio,
+		.direitos
+			width: 90%
+			height: auto
+			margin: 1% 5%
+
+			.title
+				font-size: $title-notice
+
+				.divider
+					background: $bg-news-opacity
+					width: 120px
+					height: 2px
+					margin: 2% 0
+					display: block
+
+			.item-info
+				width: 100%
+				height: 25px
+				border-bottom: 1px solid $bg-news-opacity
+				font-size: $text-small
+				line-height: 2
+
+				svg
+					margin: 1% 2%
+					fill: $color-icons
+					float: left
+
+			img
+				width: 90%
+				margin: 1% 5%
+
+			.gestao,
+			.cidade
+				text-align: center
+				color: $color-icons
+				margin: .5% 0
+				display: block
+
+// Fim do rodapé
+// Secão #blog-post
+#blog-post
+	@include smartphone
+		width: 95%
+		margin: 0 2.5%
+	@include desktop
+		background: $color-icons
+		margin: 0 auto
+	
+	.modo-leitura
+		display: none
+
+	.content-post
+		@include smartphone
+			margin-top: 20%
+		@include desktop
+			margin: 0 auto
+		.wrapper-header
+			@include desktop
+				height: 450px
+				position: relative
+				float: none
+				display: inline-block
+			img
+				@include desktop
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+					filter: blur(5px)
+					position: fixed
+			.title-post
+				@include smartphone
+					font-size: $title-post-size
+					color: $color-titles
+					text-align: center
+				@include desktop
+					width: 80%
+					font-size: $title-post-size
+					color: $color-icons
+					text-align: center
+					margin: 15% 10% 2% 10%
+					z-index: 9
+					position: absolute
+			.date
+				@include smartphone
+					width: 100%
+					height: auto
+					margin-bottom: 5%
+					display: block
+					font-size: $text-small
+					color: $bg-nav-contact
+					font-style: italic
+					text-align: center
+				@include desktop
+					width: 100%
+					height: auto
+					margin-bottom: 5%
+					display: block
+					font-size: $text-medium
+					color: $color-icons
+					font-style: italic
+					text-align: center
+					text-transform: uppercase
+					position: absolute
+					bottom: 0
+		.bg-post
+			@include desktop
+				background: $color-icons
+				position: absolute
+			.wrapper-post
+				@include desktop
+					margin: 2% 10%
+
+				h1
+					@include desktop
+						font-size: 2.7em
+						margin: 2% 0
+				h2
+					@include desktop
+						font-size: 2.5em
+						margin: 2% 0
+				h3
+					@include desktop
+						font-size: 2.3em
+						margin: 2% 0
+				h4
+					@include desktop
+						font-size: 2.1em
+						margin: 2% 0
+				.gallery
+					@include desktop
+						width: 100%
+						height: 160px
+						overflow: hidden
+					.gallery-item
+						@include desktop
+							width: 240px
+							height: 150px
+							float: left
+							margin: .5%
+							position: relative
+							box-shadow: 4px 4px 4px $bg-transparceria-opacity
+						img
+							@include desktop
+								width: 100%
+								height: 100%
+								position: absolute
+						figcaption
+							@include smartphone
+								background: rgba(189, 195, 199, .5)
+								width: 96%
+								padding: 2%
+								color: $color-titles
+								text-align: center
+								font-style: italic
+								font-size: $text-small !important
+								border-bottom: 2px solid $bg-btn-opacity
+								top: -2px
+								position: relative
+							@include desktop
+								display: none
+				p
+					font-size: $text-size
+					line-height: $text-size
+					color: $text-color
+					padding: 2%
+				iframe
+					width: 100%
+					height: 450px
+			.wrapper-informations
+				@include smartphone
+					width: 100% !important
+					height: auto
+					margin: 5% 0
+					display: block
+				@include desktop
+					height: auto
+					margin: 1% 10%
+					border-bottom: 1px solid $color-div-navslider	
+
+				.wrapper-category
+					.title
+						@include desktop
+							font-size: $text-medium
+							text-transform: uppercase
+					i
+						@include desktop
+							fill: $color-div-navslider
+							display: block
+							float: left
+					.post-categories
+						@include desktop
+							width: 80%
+							height: auto
+							margin: 1% 10%
+						li
+							@include desktop
+								font-size: $text-small
+								text-transform: uppercase
+								margin: 2% 0
+							a
+								color: $color-titles
+								transition: .3s ease-in-out
+								&:hover
+									color: $bg-nav-contact
+
+
+				.wrapper-author
+					.title
+						@include desktop
+							font-size: $text-medium
+							text-transform: uppercase
+					i
+						@include desktop
+							fill: $color-div-navslider
+							margin: 0 1%
+							display:  block
+							float: left
+					.author
+						@include desktop
+							font-size: $text-small
+							color: $color-titles
+							text-transform: uppercase
+							margin: 2% 0
+							display: block
+				.edit					
+					background: $bg-nav-contact
+					width: 20%
+					text-align: center
+					margin: 1% 40%
+					top: 20px
+					padding: 2%
+					position: relative
+					display: none
+					a
+						color: $color-icons
+
+				.wrapper-options
+					i
+						width: 48%
+						height: 100%
+						text-align: center
+						color: $color-titles
+						fill: $color-titles
+						margin: 0 1%
+						cursor: pointer
+						float: left
+						transition: .3s ease-in-out
+						svg
+							margin: 1% auto
+							display: block
+						&:hover
+							color: $bg-nav-contact
+							fill: $bg-nav-contact
+
+				.wrapper-network
+					@include desktop
+						height: 100%
+						display: block
+						position: relative
+						transition: .5s ease-in-out
+
+					.title
+						@include desktop
+							font-size: $text-medium
+							text-transform: uppercase
+					i
+						@include desktop
+							fill: $color-div-navslider
+							margin: 0 3.5%
+							display:  block
+							float: left
+					.container-network
+						@include desktop
+							width: 100%
+							text-align: left
+						.twitter
+							width: 100%
+							margin: 2% 15%
+							display: block
+						.g-plus
+							width: 100%
+							margin: 2% 15%
+							display: block
+						.fb-share-button
+							width: 100%
+							margin: 2% 15%
+							display: block
+
+			.comentarios
+				margin: 5% 10%
+
+				.title
+					font-size: $text-size
+					color: $color-titles
+					text-align: center
+					margin: 1% 25%
+
+				.warning
+					font-size: $text-small
+					font-style: italic
+					text-align: center
+					line-height: $text-medium
+					margin-left: 25%
+				.fb-comments
+					margin-left: 24.5%
+// Fim do blog-post
+// Secão #page-content
+#page-content
+	@include desktop
+		margin: 110px 5%
+	h1
+		@include desktop
+			font-size: 2.7em
+			margin: 2% 0
+	h2
+		@include desktop
+			font-size: 2.5em
+			margin: 2% 0
+	h3
+		@include desktop
+			font-size: 2.3em
+			margin: 2% 0
+	h4
+		@include desktop
+			font-size: 2.1em
+			margin: 2% 0
+	h5
+		@include desktop
+			font-size: 1.9em
+			margin: 2%
+	.title-page
+		@include desktop
+			text-align: left
+			color: $text-color
+	.date
+		@include desktop
+			color: text-color
+			top: 20.5%
+			position: absolute
+// Estilos da páginas do secretariado
+// #page-sec
+.content
+	#perfil
+		@include desktop
+			margin-top: 2%
+			position: relative
+		.pic-perfil
+			@include desktop
+				width: 250px
+				height: 250px
+				margin: 2% 45px
+				border-radius: 10%
+				box-shadow: 0px 0px 4px $color-div-navslider
+		.label
+			@include desktop
+				margin: 2% 45px
+				font-size: $text-medium
+				color: $color-titles
+				display: block
+		.label-item
+			@include desktop
+				margin: auto 45px
+				font-size: $text-size
+				color: $color-titles
+		.divider
+			background: $color-div-navslider
+			width: 50%
+			height: 1px
+			margin: 2% 45px
+			display: block
+	#description
+		@include desktop
+			position: relative
+
+		p
+			font-size: $text-size
+			line-height: $text-size
+
+		ul
+			li
+				font-size: $text-medium
+				font-style: italic
+				line-height: $text-medium
+

@@ -1,30 +1,16 @@
 // Menu Principal - Chamada do menu
 (function getMainMenu() {
 	$("#get-menu").click(function () {
-		$("nav.main-menu").css({
-			'left' : '0'
-		})
-		$("#get-menu").css({
-			'display' : 'none'
-		})
-		$("#close-menu").css({
-			'display' : 'block'
-		})
+		$(".secretarias, #close-menu").show("fast", "linear")
+		$("#get-menu").hide("fast", "linear")
 	})
 }) ();
 
 //Menu Principal - Esconder o menu
 (function closeMainMenu() {
 	$("#close-menu").click(function () {
-		$("nav.main-menu").css({
-			'left' : '-100%'
-		})
-		$("#close-menu").css({
-			'display' : 'none'
-		})
-		$("#get-menu").css({
-			'display' : 'block'
-		})
+		$(".secretarias, #close-menu").hide("fast", "linear")
+		$("#get-menu").show("fast", "linear")
 	})
 }) ();
 
@@ -45,44 +31,60 @@
 	$("ul.sub-menu > li:first-child").click(function (event) {
 		event.preventDefault();
 		$('html').find($('ul.sub-menu')).css({
-			'left' : '-100%'
+			'left' : '-200%'
 		})
-		console.log('essa porra ta funcionando!')
 	})
 }) ();
 
 // Slider
 (function btnSlider() {
-	$("#prev-sld").click(function(){
-		$('html').find($('ul.slider-body')).css({
-			'left' : '-100%'
-		})
+	if ($(".ativo").next().length) {
+		$(".ativo").fadeOut().removeClass("ativo").next().fadeIn().addClass("ativo");
+	}else{
+		$(".ativo").fadeOut().removeClass("ativo");
+		$(".slider-item:eq(0)").fadeIn().addClass("ativo");
+	}
+
+	$("#next-sld").click(function() {
+		var sliderAtual = $(".ativo");
+		sliderAtual.fadeOut().next().fadeIn().addClass("ativo");
 	})
-	$("#next-sld").click(function(){
-		$('html').find($('ul.slider-body')).css({
-			'left' : '100%'
-		})
+	$("#prev-sld").click(function() {
+		var sliderAtual = $(".ativo");
+		sliderAtual.fadeOut().removeClass("ativo").prev().fadeIn().addClass("ativo")
 	})
 }) ();
 
-(function blurHover() {
-	$(".description-slider").mouseenter(function() {
-		console.log("Sim, está aqui");
-		$("ul.slider-body").find($('img')).css({
-			'-webkit-filter' : 'blur(5px)',
-			'-moz-filter' : 'blur(5px)',
-			'filter': 'blur(5px)'
-		})
-	})
+ // (function btnSlider() {
+// 	$("#prev-sld").click(function(){
+// 		$(this).find($("li.slider-item")).css({
+// 			'margin-left' : '-20%'
+// 		})
+// 	})
+// 	$("#next-sld").click(function(){
+// 		$('html').find($('ul.slider-body')).css({
+// 			'left' : '20%'
+// 		})
+// 	})
+// }) ();
 
-	$(".description-slider").mouseleave(function(){
-		$("ul.slider-body").find($('img')).css({
-			'-webkit-filter' : 'blur(0px)',
-			'-moz-filter' : 'blur(0px)',
-			'filter': 'blur(0px)'
-		})
-	})
-}) ();
+// (function blurHover() {
+// 	$(".description-slider").mouseenter(function() {
+// 		$("ul.slider-body").find($('img')).css({
+// 			'-webkit-filter' : 'blur(5px)',
+// 			'-moz-filter' : 'blur(5px)',
+// 			'filter': 'blur(5px)'
+// 		})
+// 	})
+
+// 	$(".description-slider").mouseleave(function(){
+// 		$("ul.slider-body").find($('img')).css({
+// 			'-webkit-filter' : 'blur(0px)',
+// 			'-moz-filter' : 'blur(0px)',
+// 			'filter': 'blur(0px)'
+// 		})
+// 	})
+// }) ();
 
 (function rollPage(){
 	$("li.menu-item a").click(function(event){
@@ -167,3 +169,98 @@
 		})
 	})
 }) ();
+
+// Filtro Transparência
+(function selectFilter () {
+	var compraDireta = $("option[name='compraDireta']").val();
+	var	concorrencia = $("option[name='concorrencia']").val();
+	var concursos = $("option[name='concursos']").val();
+	var convite = $("option[name='convite']").val();
+	var leilao = $("option[name='leilao]").val();
+	var pregao = $("option[name='pregao']").val();
+	var dispensa = $("option[name='dispensa']").val();
+	var inegibilidade = $("option[name='inegibilidade']").val();
+	var rdc = $("option[name='rdc']").val();
+	var tPrecos = $("option[name='tomadadePrecos']").val();
+
+	$("#filter").change(function() {
+		var newVal = $("#filter").val();
+		// Compra Direta
+		if (newVal === compraDireta) {
+			$('ul#compradireta').fadeIn('slow');
+		}else{
+			$('ul#compradireta').fadeOut('slow');
+		}
+
+		// Concorrência
+		if(newVal === concorrencia){
+			$('ul#concorrencia').fadeIn('slow');
+		}else{
+			$('ul#concorrencia').fadeOut('slow');
+		}
+
+		// concursos
+		if(newVal === concursos){
+			$('ul#concursos').fadeIn('slow');
+		}else{
+			$('ul#concursos').fadeOut('slow');
+		}
+
+		// Convite
+		if (newVal === convite) {
+			$('ul#convite').fadeIn('slow');
+		}else{
+			$('ul#convite').fadeOut('slow');
+		}
+
+		// Leilão
+		if(newVal === leilao){
+			$('ul#leilao').fadeIn('slow');
+		}else{
+			$('ul#leilao').fadeOut('slow');
+		}
+
+		// Pregão
+		if(newVal === pregao){
+			$('ul#pregao').fadeIn('slow');
+		}else{
+			$('ul#pregao').fadeOut('slow');
+		}
+
+		// Dispensa
+		if(newVal === dispensa){
+			$('ul#dispensa').fadeIn('slow');
+		}else{
+			$('ul#dispensa').fadeOut('slow');
+		}
+
+		// Inegibilidade
+		if(newVal === inegibilidade){
+			$('ul#processodeinegibilidade').fadeIn('slow');
+		}else{
+			$('ul#processodeinegibilidade').fadeOut('slow');
+		}
+
+		// RDC
+		if(newVal === rdc){
+			$('ul#rdc').fadeIn('slow');
+		}else{
+			$('ul#rdc').fadeOut('slow');
+		}
+
+		// Tomada de Preços
+		if(newVal === tPrecos){
+			$('ul#tomadadeprecos').fadeIn('slow');
+		}else{
+			$('ul#tomadadeprecos').fadeOut('slow');
+		}
+	})
+
+}) ();
+
+
+// Função para imprimir
+$("#print").click(function(){
+	window.print();
+	return false;
+})

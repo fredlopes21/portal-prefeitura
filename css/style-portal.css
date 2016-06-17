@@ -1,0 +1,344 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+html { background: #FEFEFE; font-size: 62.5%; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Lato", sans-serif; font-weight: 700; letter-spacing: 1px; }
+
+a { font-family: "Lato", sans-serif; text-decoration: none; }
+
+p, span, blockquote, ol, ul, li, input, textarea, select, button, figcaption { font-family: "Lato", sans-serif; text-decoration: none; }
+
+.btn-main { width: 50%; height: 45px; float: left; }
+.btn-main .main-title { font-weight: 700; margin: 1%; }
+.btn-main .subtitle { font-weight: 700; font-size: 2.7em; margin: 1%; }
+.btn-main .text-paragraph { font-size: 1.6em; color: #6A6D75; line-height: 1.6; }
+.btn-main span { color: #6A6D75; font-size: 1.1em; line-height: 1.1; }
+
+#home { background: #00A859; border-bottom: 2px solid #068B3E; top: 0; position: fixed; z-index: 999; }
+@media(max-width: 360px) { #home { height: 10vh; } }
+@media(min-width: 1280px) { #home { height: 90px; } }
+#home .cabecalho { height: 100%; }
+@media(min-width: 1280px) { #home .cabecalho { width: 25%; margin-left: 5%; float: left; } }
+#home .cabecalho .logo { width: 70px; height: 70px; margin: 2%; float: left; }
+#home .cabecalho .logo .brasao { width: 100%; height: 100%; float: left; }
+#home .cabecalho .title { font-size: 2.5em; color: #FEFEFE; }
+@media(min-width: 1280px) { #home .cabecalho .title { line-height: 3.2; display: inline; } }
+@media(max-width: 360px) { #home #get-menu, #home #close-menu { width: 55px; height: 55px; text-align: center; fill: #FEFEFE; top: 0; right: 0; position: fixed; z-index: 99; } }
+@media(min-width: 1280px) { #home #get-menu, #home #close-menu { width: 55px; height: 55px; text-align: center; fill: #FEFEFE; top: 3%; right: 5%; position: fixed; z-index: 99; cursor: pointer; } }
+@media(max-width: 360px) { #home #get-menu svg, #home #close-menu svg { width: 40px; height: 40px; margin-top: 10%; } }
+@media(min-width: 1280px) { #home #get-menu svg, #home #close-menu svg { width: 55px; height: 55px; } }
+#home #get-menu .title, #home #close-menu .title { display: none; }
+#home #close-menu { display: none; }
+#home nav.fast-access ul.menu { height: 100%; }
+#home nav.fast-access li.menu-item { height: 100%; padding: 0 4%; text-align: center; -webkit-transition: 0.5 ease all; transition: 0.5 ease all; }
+#home nav.fast-access a { font-size: 1.6em; font-weight: 400; color: #982C48; line-height: 3; }
+#home nav.fast-access ul.sub-menu { position: relative; display: none; }
+#home .title-menu { margin: 2% 0; font-size: 2.5em; color: #982C48; text-align: center; }
+@media(max-width: 360px) { #home nav.main-menu { background: #D2D3D5; height: 100%; left: 100%; position: fixed; -webkit-transition: 0.5s ease-in-out; transition: 0.5s ease-in-out; z-index: 99; } }
+@media(min-width: 1280px) { #home nav.main-menu { background: none; width: 50%; display: block; float: left; } }
+@media(min-width: 1280px) { #home nav.main-menu .title-menu { display: none; } }
+@media(min-width: 1280px) { #home nav.main-menu .navigation { width: 100%; height: 100%; position: relative; } }
+#home nav.main-menu .navigation ul.menu li.menu-item { width: 90%; height: 35px; margin-left: 5%; display: block; line-height: 2; border-bottom: 1px solid rgba(107, 128, 155, 0.5); cursor: pointer; }
+@media(min-width: 1280px) { #home nav.main-menu .navigation ul.menu li.menu-item { width: 125px; height: 100%; text-align: center; margin: 4% 0 0 0; border: none; float: left; } }
+#home nav.main-menu .navigation ul.menu li.menu-item a { width: 90%; font-size: 1.6em; color: #6B809B; padding: 2%; margin: 0.5% 2%; text-decoration: none; }
+@media(min-width: 1280px) { #home nav.main-menu .navigation ul.menu li.menu-item a { display: block; padding: none; margin: none; color: #FEFEFE; } }
+@media(min-width: 1280px) { #home nav.main-menu .secretarias { background: #00A859; height: 90%; top: 92px; right: 0; position: fixed; display: none; -webkit-transition: 0.5s ease-in-out; transition: 0.5s ease-in-out; } }
+#home nav.main-menu .secretarias .title { width: 100%; display: block; height: 50px; font-size: 2.5em; color: #FEFEFE; text-align: center; text-transform: uppercase; line-height: 2; }
+@media(min-width: 1280px) { #home nav.main-menu .secretarias .menu-left-menu-container .menu { width: 100%; height: 100%; } }
+@media(min-width: 1280px) { #home nav.main-menu .secretarias .menu-left-menu-container .menu-item { width: 96%; height: 40px; font-size: 1.6em; text-align: center; text-transform: uppercase; line-height: 2; margin: 0.5% 2%; } }
+#home nav.main-menu .secretarias .menu-left-menu-container .menu-item a { color: #FEFEFE; -webkit-transition: 0.3s ease-in-out; transition: 0.3s ease-in-out; }
+#home nav.main-menu .secretarias .menu-left-menu-container .menu-item a:hover { color: #982C48; }
+
+#destaques { height: 100vh; margin: 0 5%; border-bottom: 1px solid #D2D3D5; }
+#destaques .bg-color { background: -webkit-linear-gradient(top, #1D976C, #93F9B9); background: linear-gradient(to bottom, #1D976C, #93F9B9); width: 100%; height: 100%; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -9; display: none; }
+@media(min-width: 1280px) { #destaques .title-container { width: 50%; height: 50px; top: 15%; left: 10%; position: absolute; } }
+@media(min-width: 1280px) { #destaques .title-container .title-section { font-size: 1.8em; color: #333333; line-height: 2; text-transform: uppercase; } }
+@media(min-width: 1280px) { #destaques .title-container .today { font-family: "Lato", sans-serif; font-size: 1.2em; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; color: #333333; } }
+@media(min-width: 1280px) { #destaques .title-container .today .hour { display: block; } }
+@media(max-width: 360px) { #destaques .wrapper-weather { display: none; } }
+@media(min-width: 1280px) { #destaques .wrapper-weather { width: 10%; height: 80px; top: 12%; right: 5%; text-align: center; position: absolute; }
+  #destaques .wrapper-weather .hour { display: none; } }
+@media(max-width: 360px) { #destaques .wrapper-weather #get-weather { display: none; } }
+@media(min-width: 1280px) { #destaques .wrapper-weather #get-weather { fill: #6B809B; color: #6B809B; display: block; cursor: pointer; -webkit-transition: 0.3s ease-in-out; transition: 0.3s ease-in-out; } }
+#destaques .wrapper-weather #get-weather:hover { fill: #982C48; color: #982C48; }
+#destaques .wrapper-weather #get-weather svg { width: 80px; height: 80px; }
+#destaques .wrapper-weather #get-weather .title { top: 85%; display: block; position: absolute; }
+@media(max-width: 360px) { #destaques .wrapper-weather #close-weather { display: none; } }
+@media(min-width: 1280px) { #destaques .wrapper-weather #close-weather { display: none; } }
+@media(max-width: 360px) { #destaques .widget-weather { display: none; } }
+@media(min-width: 1280px) { #destaques .widget-weather { height: 80px; margin: 8% 5% 2% 5%; left: 30%; position: absolute; } }
+#destaques .widget-weather iframe .nomP { display: none; }
+@media(max-width: 360px) { #destaques #slider { width: 100%; height: 90vh; top: 10vh; position: fixed; overflow-x: hidden; overflow-y: hidden; z-index: -9; } }
+@media(min-width: 1280px) { #destaques #slider { width: 100%; height: 580px; margin: 18% 0; z-index: -9; } }
+@media(max-width: 360px) { #destaques #slider ul.slider-body { width: 500%; height: 100%; position: relative; margin: 0; left: 0; } }
+@media(min-width: 1280px) { #destaques #slider ul.slider-body { width: 90%; height: 500px; margin: 1% 5%; position: relative; } }
+@media(max-width: 360px) { #destaques #slider ul.slider-body .slider-item { width: 20%; height: 100%; float: left; z-index: -9; } }
+@media(min-width: 1280px) { #destaques #slider ul.slider-body .slider-item { width: 49%; margin: 0 0.5%; box-shadow: 0px 0px 20px #D2D3D5; float: left; } }
+@media(min-width: 1280px) { #destaques #slider ul.slider-body .slider-item img { width: 100%; height: 100%; } }
+@media(max-width: 360px) { #destaques #slider ul.slider-body .slider-item figcaption { background: #FEFEFE; height: 50%; position: relative; } }
+@media(min-width: 1280px) { #destaques #slider ul.slider-body .slider-item figcaption { background: rgba(0, 0, 0, 0.3); width: 100%; height: 100%; top: -100%; position: relative; -webkit-transition: 0.4s ease-in-out; transition: 0.4s ease-in-out; } }
+#destaques #slider ul.slider-body .slider-item figcaption:hover { box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.5); }
+@media(max-width: 360px) { #destaques #slider ul.slider-body .slider-item figcaption .date { background: #068B3E; color: #FEFEFE; letter-spacing: 1px; text-align: center; line-height: 2; display: block; top: -5px; position: absolute; } }
+@media(min-width: 1280px) { #destaques #slider ul.slider-body .slider-item figcaption .date { background: none; width: 90%; margin-left: 5%; top: 5%; display: block; color: #FEFEFE; line-height: 2; letter-spacing: 1px; text-align: center; text-transform: uppercase; position: absolute; } }
+@media(max-width: 360px) { #destaques #slider ul.slider-body .slider-item figcaption .date svg { fill: #FEFEFE; margin: 0.5% 1%; left: 30%; position: absolute; } }
+@media(min-width: 1280px) { #destaques #slider ul.slider-body .slider-item figcaption .date svg { display: none; } }
+@media(max-width: 360px) { #destaques #slider ul.slider-body .slider-item figcaption .slider-title { width: 95%; height: 90%; font-size: 3em; color: #6B809B; font-weight: 400; text-align: center; margin: 2.5%; } }
+@media(min-width: 1280px) { #destaques #slider ul.slider-body .slider-item figcaption .slider-title { padding: 2%; font-size: 1.8em; color: #FEFEFE; text-align: center; text-transform: uppercase; line-height: 1.4em; margin-top: 60%; position: absolute; } }
+@media(min-width: 1280px) { #destaques #slider ul.slider-body .slider-item:first-child { height: 100%; display: block; } }
+@media(min-width: 1280px) { #destaques #slider ul.slider-body .slider-item:nth-child(2), #destaques #slider ul.slider-body .slider-item:nth-child(3) { height: 48%; } }
+#destaques #slider ul.slider-body .slider-item:nth-child(2) .slider-title, #destaques #slider ul.slider-body .slider-item:nth-child(3) .slider-title { margin-top: 20%; }
+@media(min-width: 1280px) { #destaques #slider ul.slider-body .slider-item:nth-child(3) { margin-top: 2%; } }
+#destaques #slider #slider-control { background: none; width: 100%; height: 30px; top: 90%; padding-left: 25%; position: fixed; }
+@media(min-width: 1280px) { #destaques #slider #slider-control { display: none; } }
+#destaques #slider #slider-control .ctrl-item { width: 18px; height: 18px; border: 2px solid #D2D3D5; border-radius: 50%; margin: 5px; float: left; }
+#destaques #slider #slider-control .current { background: #982C48; }
+#destaques #slider #prev-sld, #destaques #slider #next-sld { display: none; }
+
+#noticias { background: #f4f3ef; height: 100vh; position: relative; }
+#noticias .container { margin: 0 5%; height: 100%; }
+#noticias .container .cabecalho { display: none; }
+@media(max-width: 360px) { #noticias .container article:first-child { height: 49%; margin: 0.5% 0; } }
+@media(min-width: 1280px) { #noticias .container article:first-child { height: 60%; margin: 0; } }
+@media(max-width: 360px) { #noticias .container article:nth-child(2) { height: 49%; margin: 0.5% 0; } }
+@media(min-width: 1280px) { #noticias .container article:nth-child(2) { height: 30%; margin: 0; } }
+@media(min-width: 1280px) { #noticias .container .title-container { width: 25%; height: 50px; margin: 1% 5%; } }
+@media(min-width: 1280px) { #noticias .container .title-container .title-section { font-size: 1.8em; color: #333333; line-height: 2; text-transform: uppercase; } }
+@media(min-width: 1280px) { #noticias .container .title-container .today { font-family: "Lato", sans-serif; font-size: 1.2em; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; color: #333333; } }
+@media(min-width: 1280px) { #noticias .container .title-container .today .hour { display: block; } }
+@media(max-width: 360px) { #noticias .container .title-tvpref { margin: 2%; padding: 1%; font-size: 2.5em; text-align: center; color: #982C48; } }
+@media(min-width: 1280px) { #noticias .container .title-tvpref { width: 20%; height: 100%; font-size: 2.5em; color: #982C48; text-align: center; line-height: 5; margin-left: 5%; margin-bottom: 1.5%; padding-bottom: 0.5%; float: left; position: relative; }
+  @media(max-width: 360px) { #noticias .container .title-tvpref i { display: none; } }
+  @media(min-width: 1280px) { #noticias .container .title-tvpref i { width: 100%; text-align: center; top: 40%; display: block; position: absolute; } } }
+@media(max-width: 360px) { #noticias .container .title-tvpref .divider { background: #982C48; width: 45%; height: 2px; margin: 1% 24%; display: block; position: absolute; } }
+@media(min-width: 1280px) { #noticias .container .title-tvpref .divider { background: #982C48; width: 25%; height: 2px; margin: 0.5% 37.5%; top: 35%; display: block; position: absolute; } }
+@media(max-width: 360px) { #noticias .container .box-noticias { width: 90%; height: 70%; margin-left: 5%; box-shadow: 10px 10px 20px #BEBEBE; overflow-y: hidden; overflow-x: scroll; } }
+@media(min-width: 1280px) { #noticias .container .box-noticias { width: 100%; height: 80%; margin-left: 5%; } }
+@media(max-width: 360px) { #noticias .container .box-noticias .wrapper-news { width: 505% !important; height: 100%; } }
+@media(min-width: 1280px) { #noticias .container .box-noticias .wrapper-news { height: 100%; } }
+@media(max-width: 360px) { #noticias .container .box-noticias .wrapper-news .news-cards { width: 20%; height: 100%; margin: 0; } }
+@media(min-width: 1280px) { #noticias .container .box-noticias .wrapper-news .news-cards { width: 20%; height: 90%; margin: 0 1%; box-shadow: 10px 10px 10px #BEBEBE; -webkit-transition: 0.2s linear; transition: 0.2s linear; } }
+@media(max-width: 360px) { #noticias .container .box-noticias .wrapper-news .news-cards img { width: 100%; height: 100%; } }
+@media(min-width: 1280px) { #noticias .container .box-noticias .wrapper-news .news-cards img { width: 100%; height: 50%; } }
+#noticias .container .box-noticias .wrapper-news .news-cards .read-more { display: none; }
+@media(max-width: 360px) { #noticias .container .box-noticias .wrapper-news .news-cards .description-news { background: rgba(27, 190, 188, 0.2); width: 50%; height: 101%; top: -102%; float: right; position: relative; } }
+@media(min-width: 1280px) { #noticias .container .box-noticias .wrapper-news .news-cards .description-news { background: none; width: 100%; height: 45%; position: relative; } }
+@media(max-width: 360px) { #noticias .container .box-noticias .wrapper-news .news-cards .description-news .title { width: 100%; height: auto; font-size: 1.6em; text-align: center; color: #333333; font-weight: 400; line-height: 1.6; margin: 0; top: 10%; position: absolute; } }
+@media(min-width: 1280px) { #noticias .container .box-noticias .wrapper-news .news-cards .description-news .title { width: 95%; height: auto; font-size: 1.6em; text-align: center; color: #333333; font-weight: 400; line-height: 1.4em; margin: 0 2.5%; position: absolute; } }
+@media(max-width: 360px) { #noticias .container .box-noticias .wrapper-news .news-cards .description-news .divider { background: #D2D3D5; width: 80%; height: 2px; margin: 1% 10%; bottom: 30px; position: absolute; } }
+@media(min-width: 1280px) { #noticias .container .box-noticias .wrapper-news .news-cards .description-news .divider { background: #D2D3D5; width: 80%; height: 1px; margin: 0 10%; bottom: 30px; position: absolute; } }
+@media(max-width: 360px) { #noticias .container .box-noticias .wrapper-news .news-cards .description-news .date { width: 100%; color: #FEFEFE; fill: #FEFEFE; text-align: center; letter-spacing: 1px; margin: 1%; bottom: 10px; position: absolute; } }
+@media(min-width: 1280px) { #noticias .container .box-noticias .wrapper-news .news-cards .description-news .date { width: 100%; color: #333333; fill: #333333; text-align: center; letter-spacing: 1px; margin: 0; bottom: 10px; position: absolute; } }
+#noticias .container .box-noticias .wrapper-news .news-cards .description-news .date i { margin: 1%; }
+#noticias .container .box-noticias .wrapper-news .news-cards .description-news .author { display: none; }
+#noticias .container .box-noticias .wrapper-news .news-cards:hover { box-shadow: 0px 0px 10px #BEBEBE; }
+#noticias .container .box-noticias .wrapper-news .fa { margin: 2%; }
+@media(max-width: 360px) { #noticias .container #slider-control-news { background: none; width: 38%; height: 30px; top: 10px; left: 34%; position: relative; } }
+@media(min-width: 1280px) { #noticias .container #slider-control-news { display: none; } }
+#noticias .container #slider-control-news .ctrl-item { width: 10px; height: 10px; border: 2px solid #D2D3D5; border-radius: 50%; margin: 5px; float: left; }
+#noticias .container #slider-control-news .current { background: #1BBEBC; }
+@media(max-width: 360px) { #noticias .container #slider-control-tvpref { background: none; width: 24%; height: 30px; left: 39.5%; position: relative; } }
+@media(min-width: 1280px) { #noticias .container #slider-control-tvpref { display: none; } }
+#noticias .container #slider-control-tvpref .ctrl-item { width: 10px; height: 10px; border: 2px solid #D2D3D5; border-radius: 50%; margin: 5px; float: left; }
+#noticias .container #slider-control-tvpref .current { background: #982C48; }
+@media(max-width: 360px) { #noticias .container .box-tv-prefeitura { width: 90%; height: 70%; margin-left: 5%; box-shadow: 10px 10px 20px #BEBEBE; overflow-y: hidden; overflow-x: scroll; } }
+@media(min-width: 1280px) { #noticias .container .box-tv-prefeitura { width: 67%; height: 100%; margin-left: 30%; } }
+@media(max-width: 360px) { #noticias .container .box-tv-prefeitura .tv-pref { width: 505% !important; height: 100%; } }
+@media(min-width: 1280px) { #noticias .container .box-tv-prefeitura .tv-pref { width: 100% !important; height: 100%; } }
+@media(max-width: 360px) { #noticias .container .box-tv-prefeitura .tv-pref .wrapper-video { width: 20%; height: 100%; margin: 0; } }
+@media(min-width: 1280px) { #noticias .container .box-tv-prefeitura .tv-pref .wrapper-video { width: 45%; height: 100%; margin: 0 1%; position: relative; box-shadow: 10px 10px 10px #BEBEBE; -webkit-transition: 0.2s linear; transition: 0.2s linear; } }
+@media(max-width: 360px) { #noticias .container .box-tv-prefeitura .tv-pref .wrapper-video img { width: 100%; height: 100%; } }
+@media(min-width: 1280px) { #noticias .container .box-tv-prefeitura .tv-pref .wrapper-video img { width: 100%; height: 100%; } }
+#noticias .container .box-tv-prefeitura .tv-pref .wrapper-video a { width: 100%; color: #982C48; text-align: center; top: 10px; }
+@media(max-width: 360px) { #noticias .container .box-tv-prefeitura .tv-pref .wrapper-video .description-tvpref { background: rgba(152, 44, 72, 0.2); width: 50%; height: 101%; top: -102%; float: right; position: relative; } }
+@media(min-width: 1280px) { #noticias .container .box-tv-prefeitura .tv-pref .wrapper-video .description-tvpref { width: 50%; height: 100%; top: 0; float: left; position: absolute; } }
+@media(max-width: 360px) { #noticias .container .box-tv-prefeitura .tv-pref .wrapper-video .description-tvpref .title { font-size: 1.8em; text-align: center; color: #FEFEFE; padding: 1%; display: block; } }
+@media(min-width: 1280px) { #noticias .container .box-tv-prefeitura .tv-pref .wrapper-video .description-tvpref .title { font-size: 1.8em; text-align: left; color: #FEFEFE; top: 25%; margin: 2%; padding: 1%; display: block; position: absolute; text-shadow: 1px 0px 2px #333333; border-bottom: 1px solid; } }
+@media(max-width: 360px) { #noticias .container .box-tv-prefeitura .tv-pref .wrapper-video .description-tvpref .play { width: 100%; text-align: center; fill: #982C48; top: 35%; left: 100%; position: absolute; } }
+@media(min-width: 1280px) { #noticias .container .box-tv-prefeitura .tv-pref .wrapper-video .description-tvpref .play { text-align: center; fill: #FEFEFE; top: 35%; left: 130%; position: absolute; } }
+#noticias .container .box-tv-prefeitura .tv-pref .wrapper-video .description-tvpref .date { width: 100%; color: #FEFEFE; fill: #FEFEFE; text-align: left; font-weight: 400; letter-spacing: 1px; bottom: 10px; left: 5%; position: absolute; }
+#noticias .container .box-tv-prefeitura .tv-pref .wrapper-video .description-tvpref .date i { margin: 0 2%; }
+#noticias .container .box-tv-prefeitura .tv-pref .wrapper-video .description-tvpref .author { display: none; }
+@media(min-width: 1280px) { #noticias .container .box-tv-prefeitura .tv-pref .wrapper-video:hover { box-shadow: 0px 0px 10px #BEBEBE; } }
+@media(max-width: 360px) { #transparencia { background: url(http://izzyweb.com.br/public/img/btransparencia-smartphone.jpg) no-repeat fixed; height: 100vh; } }
+@media(min-width: 1280px) { #transparencia { background: url(http://izzyweb.com.br/public/img/transparencia-desktop.jpg) no-repeat fixed; height: 100vh; position: relative; } }
+#transparencia .back-color { background: rgba(0, 0, 0, 0.2); width: 100%; height: 100%; position: absolute; z-index: 9; }
+@media(min-width: 1280px) { #transparencia .title-container { width: 20%; height: 50px; margin: 1% 5%; } }
+@media(min-width: 1280px) { #transparencia .title-container .title-section { font-size: 1.8em; color: #FEFEFE; line-height: 2; text-transform: uppercase; } }
+@media(min-width: 1280px) { #transparencia .title-container .today { font-family: "Lato", sans-serif; font-size: 1.2em; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; color: #FEFEFE; } }
+@media(min-width: 1280px) { #transparencia .title-container .today .hour { display: block; } }
+@media(max-width: 360px) { #transparencia .btn-boxes-mobile { width: 100%; height: 50vh; margin: auto; } }
+@media(min-width: 1280px) { #transparencia .btn-boxes-mobile { display: none; } }
+#transparencia .btn-boxes-mobile .title { font-size: 1.6em; text-align: center; color: #FEFEFE; font-weight: 400; line-height: 1.6; border-bottom: 1px solid #D2D3D5; display: none; }
+#transparencia .btn-boxes-mobile .btn-box { background: rgba(107, 128, 155, 0.5); width: 130px; height: 120px; margin: 1% 4%; border: 2px solid #D2D3D5; text-align: center; float: left; }
+#transparencia .btn-boxes-mobile .title-box { font-size: 1.6em; color: #FEFEFE; margin-top: 20%; display: block; }
+#transparencia .btn-boxes-mobile i { fill: #FEFEFE; }
+#transparencia .box-links { width: 90%; height: 30vh; margin: 5%; overflow: scroll; display: none; }
+#transparencia .box-links .title { font-size: 1.6em; color: #982C48; text-align: center; margin-bottom: 2%; display: block; }
+#transparencia .box-links .content-links { width: 100%; height: 100%; }
+#transparencia .box-links .content-links .link-item { width: 100%; height: 30px; font-size: 1.6em; line-height: 1.5; }
+#transparencia .box-links .content-links .link-item a { width: 100%; height: 100%; border-bottom: 1px dashed black; }
+#transparencia .main-panel { height: 55%; margin-left: 5%; }
+#transparencia .main-panel .box { height: 100%; }
+@media(max-width: 360px) { #transparencia .main-panel .box .wrapper-edital, #transparencia .main-panel .box .wrapper-licitacoes, #transparencia .main-panel .box .wrapper-decretos, #transparencia .main-panel .box .wrapper-transp { display: none; } }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital, #transparencia .main-panel .box .wrapper-licitacoes, #transparencia .main-panel .box .wrapper-decretos, #transparencia .main-panel .box .wrapper-transp { background: #FEFEFE; width: 95%; height: 100%; margin: 0 2.5%; position: relative; opacity: 0.9; -webkit-transition: 0.2s linear; transition: 0.2s linear; } }
+@media(max-width: 360px) { #transparencia .main-panel .box .wrapper-edital .wrapper-filter, #transparencia .main-panel .box .wrapper-licitacoes .wrapper-filter, #transparencia .main-panel .box .wrapper-decretos .wrapper-filter, #transparencia .main-panel .box .wrapper-transp .wrapper-filter { width: 100%; bottom: 10px; position: absolute; } }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital .wrapper-filter, #transparencia .main-panel .box .wrapper-licitacoes .wrapper-filter, #transparencia .main-panel .box .wrapper-decretos .wrapper-filter, #transparencia .main-panel .box .wrapper-transp .wrapper-filter { width: 100%; bottom: 10px; position: absolute; } }
+@media(max-width: 360px) { #transparencia .main-panel .box .wrapper-edital .wrapper-filter #filter, #transparencia .main-panel .box .wrapper-licitacoes .wrapper-filter #filter, #transparencia .main-panel .box .wrapper-decretos .wrapper-filter #filter, #transparencia .main-panel .box .wrapper-transp .wrapper-filter #filter { background: none; width: 99%; padding: 1%; font-size: 1.2em; color: #7E7E7E; border: none; } }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital .wrapper-filter #filter, #transparencia .main-panel .box .wrapper-licitacoes .wrapper-filter #filter, #transparencia .main-panel .box .wrapper-decretos .wrapper-filter #filter, #transparencia .main-panel .box .wrapper-transp .wrapper-filter #filter { background: #FEFEFE; width: 90%; padding: 1% 2%; margin: 1% 3%; font-size: 1.4em; color: #333333; text-transform: uppercase; border: 1px solid #D2D3D5; } }
+#transparencia .main-panel .box .wrapper-edital .wrapper-filter #options-filter, #transparencia .main-panel .box .wrapper-licitacoes .wrapper-filter #options-filter, #transparencia .main-panel .box .wrapper-decretos .wrapper-filter #options-filter, #transparencia .main-panel .box .wrapper-transp .wrapper-filter #options-filter { -webkit-transition: 0.2s ease-in-out; transition: 0.2s ease-in-out; }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital:hover, #transparencia .main-panel .box .wrapper-licitacoes:hover, #transparencia .main-panel .box .wrapper-decretos:hover, #transparencia .main-panel .box .wrapper-transp:hover { opacity: 1; } }
+#transparencia .main-panel .box .wrapper-edital .cabecalho, #transparencia .main-panel .box .wrapper-licitacoes .cabecalho, #transparencia .main-panel .box .wrapper-decretos .cabecalho, #transparencia .main-panel .box .wrapper-transp .cabecalho { background: #FEFEFE; width: 100%; height: 55px; border-bottom: 1px solid #D2D3D5; }
+@media(max-width: 360px) { #transparencia .main-panel .box .wrapper-edital .cabecalho .title, #transparencia .main-panel .box .wrapper-licitacoes .cabecalho .title, #transparencia .main-panel .box .wrapper-decretos .cabecalho .title, #transparencia .main-panel .box .wrapper-transp .cabecalho .title { color: #fff; text-align: left; line-height: 1.5; padding: 0.5% 2%; display: block; } }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital .cabecalho .title, #transparencia .main-panel .box .wrapper-licitacoes .cabecalho .title, #transparencia .main-panel .box .wrapper-decretos .cabecalho .title, #transparencia .main-panel .box .wrapper-transp .cabecalho .title { font-size: 1.8em; color: #982C48; text-align: center; text-transform: uppercase; font-weight: 400; padding: 1% 2%; margin-bottom: 2%; display: block; position: relative; } }
+@media(max-width: 360px) { #transparencia .main-panel .box .wrapper-edital .cabecalho .title #question, #transparencia .main-panel .box .wrapper-licitacoes .cabecalho .title #question, #transparencia .main-panel .box .wrapper-decretos .cabecalho .title #question, #transparencia .main-panel .box .wrapper-transp .cabecalho .title #question { font-size: 1.2em; color: #fff; top: 12%; right: 5%; position: absolute; cursor: pointer; } }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital .cabecalho .title #question, #transparencia .main-panel .box .wrapper-licitacoes .cabecalho .title #question, #transparencia .main-panel .box .wrapper-decretos .cabecalho .title #question, #transparencia .main-panel .box .wrapper-transp .cabecalho .title #question { display: none; } }
+@media(max-width: 360px) { #transparencia .main-panel .box .wrapper-edital .cabecalho .description, #transparencia .main-panel .box .wrapper-licitacoes .cabecalho .description, #transparencia .main-panel .box .wrapper-decretos .cabecalho .description, #transparencia .main-panel .box .wrapper-transp .cabecalho .description { display: none; } }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital .cabecalho .description, #transparencia .main-panel .box .wrapper-licitacoes .cabecalho .description, #transparencia .main-panel .box .wrapper-decretos .cabecalho .description, #transparencia .main-panel .box .wrapper-transp .cabecalho .description { width: 100%; height: 20px; position: relative; } }
+#transparencia .main-panel .box .wrapper-edital .cabecalho .description .resumo, #transparencia .main-panel .box .wrapper-licitacoes .cabecalho .description .resumo, #transparencia .main-panel .box .wrapper-decretos .cabecalho .description .resumo, #transparencia .main-panel .box .wrapper-transp .cabecalho .description .resumo { top: 15%; left: 5%; position: absolute; color: #333333; font-size: 0.8em; font-style: italic; text-transform: uppercase; line-height: 2.5; }
+#transparencia .main-panel .box .wrapper-edital .cabecalho .description .calendar, #transparencia .main-panel .box .wrapper-licitacoes .cabecalho .description .calendar, #transparencia .main-panel .box .wrapper-decretos .cabecalho .description .calendar, #transparencia .main-panel .box .wrapper-transp .cabecalho .description .calendar { top: 15%; right: 10%; position: absolute; }
+#transparencia .main-panel .box .wrapper-edital .cabecalho .description .calendar i, #transparencia .main-panel .box .wrapper-licitacoes .cabecalho .description .calendar i, #transparencia .main-panel .box .wrapper-decretos .cabecalho .description .calendar i, #transparencia .main-panel .box .wrapper-transp .cabecalho .description .calendar i { fill: #333333; }
+#transparencia .main-panel .box .wrapper-edital .divider, #transparencia .main-panel .box .wrapper-licitacoes .divider, #transparencia .main-panel .box .wrapper-decretos .divider, #transparencia .main-panel .box .wrapper-transp .divider { background: #FEFEFE; width: 95%; height: 1px; margin: 2% 2.5%; display: block; }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital .content-list, #transparencia .main-panel .box .wrapper-edital #compradireta, #transparencia .main-panel .box .wrapper-edital #concorrencia, #transparencia .main-panel .box .wrapper-edital #concursos, #transparencia .main-panel .box .wrapper-edital #convite, #transparencia .main-panel .box .wrapper-edital #leilao, #transparencia .main-panel .box .wrapper-edital #pregao, #transparencia .main-panel .box .wrapper-edital #processodedispensa, #transparencia .main-panel .box .wrapper-edital #processodeinegibilidade, #transparencia .main-panel .box .wrapper-edital #rdc, #transparencia .main-panel .box .wrapper-edital #tomadadeprecos, #transparencia .main-panel .box .wrapper-licitacoes .content-list, #transparencia .main-panel .box .wrapper-licitacoes #compradireta, #transparencia .main-panel .box .wrapper-licitacoes #concorrencia, #transparencia .main-panel .box .wrapper-licitacoes #concursos, #transparencia .main-panel .box .wrapper-licitacoes #convite, #transparencia .main-panel .box .wrapper-licitacoes #leilao, #transparencia .main-panel .box .wrapper-licitacoes #pregao, #transparencia .main-panel .box .wrapper-licitacoes #processodedispensa, #transparencia .main-panel .box .wrapper-licitacoes #processodeinegibilidade, #transparencia .main-panel .box .wrapper-licitacoes #rdc, #transparencia .main-panel .box .wrapper-licitacoes #tomadadeprecos, #transparencia .main-panel .box .wrapper-decretos .content-list, #transparencia .main-panel .box .wrapper-decretos #compradireta, #transparencia .main-panel .box .wrapper-decretos #concorrencia, #transparencia .main-panel .box .wrapper-decretos #concursos, #transparencia .main-panel .box .wrapper-decretos #convite, #transparencia .main-panel .box .wrapper-decretos #leilao, #transparencia .main-panel .box .wrapper-decretos #pregao, #transparencia .main-panel .box .wrapper-decretos #processodedispensa, #transparencia .main-panel .box .wrapper-decretos #processodeinegibilidade, #transparencia .main-panel .box .wrapper-decretos #rdc, #transparencia .main-panel .box .wrapper-decretos #tomadadeprecos, #transparencia .main-panel .box .wrapper-transp .content-list, #transparencia .main-panel .box .wrapper-transp #compradireta, #transparencia .main-panel .box .wrapper-transp #concorrencia, #transparencia .main-panel .box .wrapper-transp #concursos, #transparencia .main-panel .box .wrapper-transp #convite, #transparencia .main-panel .box .wrapper-transp #leilao, #transparencia .main-panel .box .wrapper-transp #pregao, #transparencia .main-panel .box .wrapper-transp #processodedispensa, #transparencia .main-panel .box .wrapper-transp #processodeinegibilidade, #transparencia .main-panel .box .wrapper-transp #rdc, #transparencia .main-panel .box .wrapper-transp #tomadadeprecos { width: 95%; height: 80%; margin: 1% 2.5%; position: relative; } }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital .content-list .link-item, #transparencia .main-panel .box .wrapper-edital #compradireta .link-item, #transparencia .main-panel .box .wrapper-edital #concorrencia .link-item, #transparencia .main-panel .box .wrapper-edital #concursos .link-item, #transparencia .main-panel .box .wrapper-edital #convite .link-item, #transparencia .main-panel .box .wrapper-edital #leilao .link-item, #transparencia .main-panel .box .wrapper-edital #pregao .link-item, #transparencia .main-panel .box .wrapper-edital #processodedispensa .link-item, #transparencia .main-panel .box .wrapper-edital #processodeinegibilidade .link-item, #transparencia .main-panel .box .wrapper-edital #rdc .link-item, #transparencia .main-panel .box .wrapper-edital #tomadadeprecos .link-item, #transparencia .main-panel .box .wrapper-licitacoes .content-list .link-item, #transparencia .main-panel .box .wrapper-licitacoes #compradireta .link-item, #transparencia .main-panel .box .wrapper-licitacoes #concorrencia .link-item, #transparencia .main-panel .box .wrapper-licitacoes #concursos .link-item, #transparencia .main-panel .box .wrapper-licitacoes #convite .link-item, #transparencia .main-panel .box .wrapper-licitacoes #leilao .link-item, #transparencia .main-panel .box .wrapper-licitacoes #pregao .link-item, #transparencia .main-panel .box .wrapper-licitacoes #processodedispensa .link-item, #transparencia .main-panel .box .wrapper-licitacoes #processodeinegibilidade .link-item, #transparencia .main-panel .box .wrapper-licitacoes #rdc .link-item, #transparencia .main-panel .box .wrapper-licitacoes #tomadadeprecos .link-item, #transparencia .main-panel .box .wrapper-decretos .content-list .link-item, #transparencia .main-panel .box .wrapper-decretos #compradireta .link-item, #transparencia .main-panel .box .wrapper-decretos #concorrencia .link-item, #transparencia .main-panel .box .wrapper-decretos #concursos .link-item, #transparencia .main-panel .box .wrapper-decretos #convite .link-item, #transparencia .main-panel .box .wrapper-decretos #leilao .link-item, #transparencia .main-panel .box .wrapper-decretos #pregao .link-item, #transparencia .main-panel .box .wrapper-decretos #processodedispensa .link-item, #transparencia .main-panel .box .wrapper-decretos #processodeinegibilidade .link-item, #transparencia .main-panel .box .wrapper-decretos #rdc .link-item, #transparencia .main-panel .box .wrapper-decretos #tomadadeprecos .link-item, #transparencia .main-panel .box .wrapper-transp .content-list .link-item, #transparencia .main-panel .box .wrapper-transp #compradireta .link-item, #transparencia .main-panel .box .wrapper-transp #concorrencia .link-item, #transparencia .main-panel .box .wrapper-transp #concursos .link-item, #transparencia .main-panel .box .wrapper-transp #convite .link-item, #transparencia .main-panel .box .wrapper-transp #leilao .link-item, #transparencia .main-panel .box .wrapper-transp #pregao .link-item, #transparencia .main-panel .box .wrapper-transp #processodedispensa .link-item, #transparencia .main-panel .box .wrapper-transp #processodeinegibilidade .link-item, #transparencia .main-panel .box .wrapper-transp #rdc .link-item, #transparencia .main-panel .box .wrapper-transp #tomadadeprecos .link-item { width: 100%; height: 25px; font-size: 1.2em; color: #333333; line-height: 2; margin-bottom: 2%; border-bottom: 1px solid #D2D3D5; } }
+#transparencia .main-panel .box .wrapper-edital .content-list .link-item .date, #transparencia .main-panel .box .wrapper-edital #compradireta .link-item .date, #transparencia .main-panel .box .wrapper-edital #concorrencia .link-item .date, #transparencia .main-panel .box .wrapper-edital #concursos .link-item .date, #transparencia .main-panel .box .wrapper-edital #convite .link-item .date, #transparencia .main-panel .box .wrapper-edital #leilao .link-item .date, #transparencia .main-panel .box .wrapper-edital #pregao .link-item .date, #transparencia .main-panel .box .wrapper-edital #processodedispensa .link-item .date, #transparencia .main-panel .box .wrapper-edital #processodeinegibilidade .link-item .date, #transparencia .main-panel .box .wrapper-edital #rdc .link-item .date, #transparencia .main-panel .box .wrapper-edital #tomadadeprecos .link-item .date, #transparencia .main-panel .box .wrapper-licitacoes .content-list .link-item .date, #transparencia .main-panel .box .wrapper-licitacoes #compradireta .link-item .date, #transparencia .main-panel .box .wrapper-licitacoes #concorrencia .link-item .date, #transparencia .main-panel .box .wrapper-licitacoes #concursos .link-item .date, #transparencia .main-panel .box .wrapper-licitacoes #convite .link-item .date, #transparencia .main-panel .box .wrapper-licitacoes #leilao .link-item .date, #transparencia .main-panel .box .wrapper-licitacoes #pregao .link-item .date, #transparencia .main-panel .box .wrapper-licitacoes #processodedispensa .link-item .date, #transparencia .main-panel .box .wrapper-licitacoes #processodeinegibilidade .link-item .date, #transparencia .main-panel .box .wrapper-licitacoes #rdc .link-item .date, #transparencia .main-panel .box .wrapper-licitacoes #tomadadeprecos .link-item .date, #transparencia .main-panel .box .wrapper-decretos .content-list .link-item .date, #transparencia .main-panel .box .wrapper-decretos #compradireta .link-item .date, #transparencia .main-panel .box .wrapper-decretos #concorrencia .link-item .date, #transparencia .main-panel .box .wrapper-decretos #concursos .link-item .date, #transparencia .main-panel .box .wrapper-decretos #convite .link-item .date, #transparencia .main-panel .box .wrapper-decretos #leilao .link-item .date, #transparencia .main-panel .box .wrapper-decretos #pregao .link-item .date, #transparencia .main-panel .box .wrapper-decretos #processodedispensa .link-item .date, #transparencia .main-panel .box .wrapper-decretos #processodeinegibilidade .link-item .date, #transparencia .main-panel .box .wrapper-decretos #rdc .link-item .date, #transparencia .main-panel .box .wrapper-decretos #tomadadeprecos .link-item .date, #transparencia .main-panel .box .wrapper-transp .content-list .link-item .date, #transparencia .main-panel .box .wrapper-transp #compradireta .link-item .date, #transparencia .main-panel .box .wrapper-transp #concorrencia .link-item .date, #transparencia .main-panel .box .wrapper-transp #concursos .link-item .date, #transparencia .main-panel .box .wrapper-transp #convite .link-item .date, #transparencia .main-panel .box .wrapper-transp #leilao .link-item .date, #transparencia .main-panel .box .wrapper-transp #pregao .link-item .date, #transparencia .main-panel .box .wrapper-transp #processodedispensa .link-item .date, #transparencia .main-panel .box .wrapper-transp #processodeinegibilidade .link-item .date, #transparencia .main-panel .box .wrapper-transp #rdc .link-item .date, #transparencia .main-panel .box .wrapper-transp #tomadadeprecos .link-item .date { font-size: 0.8em; padding-left: 2%; border-left: 1px solid #D2D3D5; float: right; }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital .content-list .pac-ghost, #transparencia .main-panel .box .wrapper-edital #compradireta .pac-ghost, #transparencia .main-panel .box .wrapper-edital #concorrencia .pac-ghost, #transparencia .main-panel .box .wrapper-edital #concursos .pac-ghost, #transparencia .main-panel .box .wrapper-edital #convite .pac-ghost, #transparencia .main-panel .box .wrapper-edital #leilao .pac-ghost, #transparencia .main-panel .box .wrapper-edital #pregao .pac-ghost, #transparencia .main-panel .box .wrapper-edital #processodedispensa .pac-ghost, #transparencia .main-panel .box .wrapper-edital #processodeinegibilidade .pac-ghost, #transparencia .main-panel .box .wrapper-edital #rdc .pac-ghost, #transparencia .main-panel .box .wrapper-edital #tomadadeprecos .pac-ghost, #transparencia .main-panel .box .wrapper-licitacoes .content-list .pac-ghost, #transparencia .main-panel .box .wrapper-licitacoes #compradireta .pac-ghost, #transparencia .main-panel .box .wrapper-licitacoes #concorrencia .pac-ghost, #transparencia .main-panel .box .wrapper-licitacoes #concursos .pac-ghost, #transparencia .main-panel .box .wrapper-licitacoes #convite .pac-ghost, #transparencia .main-panel .box .wrapper-licitacoes #leilao .pac-ghost, #transparencia .main-panel .box .wrapper-licitacoes #pregao .pac-ghost, #transparencia .main-panel .box .wrapper-licitacoes #processodedispensa .pac-ghost, #transparencia .main-panel .box .wrapper-licitacoes #processodeinegibilidade .pac-ghost, #transparencia .main-panel .box .wrapper-licitacoes #rdc .pac-ghost, #transparencia .main-panel .box .wrapper-licitacoes #tomadadeprecos .pac-ghost, #transparencia .main-panel .box .wrapper-decretos .content-list .pac-ghost, #transparencia .main-panel .box .wrapper-decretos #compradireta .pac-ghost, #transparencia .main-panel .box .wrapper-decretos #concorrencia .pac-ghost, #transparencia .main-panel .box .wrapper-decretos #concursos .pac-ghost, #transparencia .main-panel .box .wrapper-decretos #convite .pac-ghost, #transparencia .main-panel .box .wrapper-decretos #leilao .pac-ghost, #transparencia .main-panel .box .wrapper-decretos #pregao .pac-ghost, #transparencia .main-panel .box .wrapper-decretos #processodedispensa .pac-ghost, #transparencia .main-panel .box .wrapper-decretos #processodeinegibilidade .pac-ghost, #transparencia .main-panel .box .wrapper-decretos #rdc .pac-ghost, #transparencia .main-panel .box .wrapper-decretos #tomadadeprecos .pac-ghost, #transparencia .main-panel .box .wrapper-transp .content-list .pac-ghost, #transparencia .main-panel .box .wrapper-transp #compradireta .pac-ghost, #transparencia .main-panel .box .wrapper-transp #concorrencia .pac-ghost, #transparencia .main-panel .box .wrapper-transp #concursos .pac-ghost, #transparencia .main-panel .box .wrapper-transp #convite .pac-ghost, #transparencia .main-panel .box .wrapper-transp #leilao .pac-ghost, #transparencia .main-panel .box .wrapper-transp #pregao .pac-ghost, #transparencia .main-panel .box .wrapper-transp #processodedispensa .pac-ghost, #transparencia .main-panel .box .wrapper-transp #processodeinegibilidade .pac-ghost, #transparencia .main-panel .box .wrapper-transp #rdc .pac-ghost, #transparencia .main-panel .box .wrapper-transp #tomadadeprecos .pac-ghost { width: 100%; display: block; text-align: center; margin: 5% 0; top: 25%; position: absolute; } }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital .content-list .title-404, #transparencia .main-panel .box .wrapper-edital #compradireta .title-404, #transparencia .main-panel .box .wrapper-edital #concorrencia .title-404, #transparencia .main-panel .box .wrapper-edital #concursos .title-404, #transparencia .main-panel .box .wrapper-edital #convite .title-404, #transparencia .main-panel .box .wrapper-edital #leilao .title-404, #transparencia .main-panel .box .wrapper-edital #pregao .title-404, #transparencia .main-panel .box .wrapper-edital #processodedispensa .title-404, #transparencia .main-panel .box .wrapper-edital #processodeinegibilidade .title-404, #transparencia .main-panel .box .wrapper-edital #rdc .title-404, #transparencia .main-panel .box .wrapper-edital #tomadadeprecos .title-404, #transparencia .main-panel .box .wrapper-licitacoes .content-list .title-404, #transparencia .main-panel .box .wrapper-licitacoes #compradireta .title-404, #transparencia .main-panel .box .wrapper-licitacoes #concorrencia .title-404, #transparencia .main-panel .box .wrapper-licitacoes #concursos .title-404, #transparencia .main-panel .box .wrapper-licitacoes #convite .title-404, #transparencia .main-panel .box .wrapper-licitacoes #leilao .title-404, #transparencia .main-panel .box .wrapper-licitacoes #pregao .title-404, #transparencia .main-panel .box .wrapper-licitacoes #processodedispensa .title-404, #transparencia .main-panel .box .wrapper-licitacoes #processodeinegibilidade .title-404, #transparencia .main-panel .box .wrapper-licitacoes #rdc .title-404, #transparencia .main-panel .box .wrapper-licitacoes #tomadadeprecos .title-404, #transparencia .main-panel .box .wrapper-decretos .content-list .title-404, #transparencia .main-panel .box .wrapper-decretos #compradireta .title-404, #transparencia .main-panel .box .wrapper-decretos #concorrencia .title-404, #transparencia .main-panel .box .wrapper-decretos #concursos .title-404, #transparencia .main-panel .box .wrapper-decretos #convite .title-404, #transparencia .main-panel .box .wrapper-decretos #leilao .title-404, #transparencia .main-panel .box .wrapper-decretos #pregao .title-404, #transparencia .main-panel .box .wrapper-decretos #processodedispensa .title-404, #transparencia .main-panel .box .wrapper-decretos #processodeinegibilidade .title-404, #transparencia .main-panel .box .wrapper-decretos #rdc .title-404, #transparencia .main-panel .box .wrapper-decretos #tomadadeprecos .title-404, #transparencia .main-panel .box .wrapper-transp .content-list .title-404, #transparencia .main-panel .box .wrapper-transp #compradireta .title-404, #transparencia .main-panel .box .wrapper-transp #concorrencia .title-404, #transparencia .main-panel .box .wrapper-transp #concursos .title-404, #transparencia .main-panel .box .wrapper-transp #convite .title-404, #transparencia .main-panel .box .wrapper-transp #leilao .title-404, #transparencia .main-panel .box .wrapper-transp #pregao .title-404, #transparencia .main-panel .box .wrapper-transp #processodedispensa .title-404, #transparencia .main-panel .box .wrapper-transp #processodeinegibilidade .title-404, #transparencia .main-panel .box .wrapper-transp #rdc .title-404, #transparencia .main-panel .box .wrapper-transp #tomadadeprecos .title-404 { font-size: 1.6em; color: #333333; text-align: center; top: 45%; position: absolute; } }
+@media(min-width: 1280px) { #transparencia .main-panel .box .wrapper-edital #compradireta, #transparencia .main-panel .box .wrapper-edital #concorrencia, #transparencia .main-panel .box .wrapper-edital #concursos, #transparencia .main-panel .box .wrapper-edital #convite, #transparencia .main-panel .box .wrapper-edital #leilao, #transparencia .main-panel .box .wrapper-edital #pregao, #transparencia .main-panel .box .wrapper-edital #processodedispensa, #transparencia .main-panel .box .wrapper-edital #processodeinegibilidade, #transparencia .main-panel .box .wrapper-edital #rdc, #transparencia .main-panel .box .wrapper-edital #tomadadeprecos, #transparencia .main-panel .box .wrapper-licitacoes #compradireta, #transparencia .main-panel .box .wrapper-licitacoes #concorrencia, #transparencia .main-panel .box .wrapper-licitacoes #concursos, #transparencia .main-panel .box .wrapper-licitacoes #convite, #transparencia .main-panel .box .wrapper-licitacoes #leilao, #transparencia .main-panel .box .wrapper-licitacoes #pregao, #transparencia .main-panel .box .wrapper-licitacoes #processodedispensa, #transparencia .main-panel .box .wrapper-licitacoes #processodeinegibilidade, #transparencia .main-panel .box .wrapper-licitacoes #rdc, #transparencia .main-panel .box .wrapper-licitacoes #tomadadeprecos, #transparencia .main-panel .box .wrapper-decretos #compradireta, #transparencia .main-panel .box .wrapper-decretos #concorrencia, #transparencia .main-panel .box .wrapper-decretos #concursos, #transparencia .main-panel .box .wrapper-decretos #convite, #transparencia .main-panel .box .wrapper-decretos #leilao, #transparencia .main-panel .box .wrapper-decretos #pregao, #transparencia .main-panel .box .wrapper-decretos #processodedispensa, #transparencia .main-panel .box .wrapper-decretos #processodeinegibilidade, #transparencia .main-panel .box .wrapper-decretos #rdc, #transparencia .main-panel .box .wrapper-decretos #tomadadeprecos, #transparencia .main-panel .box .wrapper-transp #compradireta, #transparencia .main-panel .box .wrapper-transp #concorrencia, #transparencia .main-panel .box .wrapper-transp #concursos, #transparencia .main-panel .box .wrapper-transp #convite, #transparencia .main-panel .box .wrapper-transp #leilao, #transparencia .main-panel .box .wrapper-transp #pregao, #transparencia .main-panel .box .wrapper-transp #processodedispensa, #transparencia .main-panel .box .wrapper-transp #processodeinegibilidade, #transparencia .main-panel .box .wrapper-transp #rdc, #transparencia .main-panel .box .wrapper-transp #tomadadeprecos { display: none; } }
+@media(max-width: 360px) { #transparencia .proposta-eletronica { display: none; } }
+@media(min-width: 1280px) { #transparencia .proposta-eletronica { height: 25%; margin: 2% 5% 1% 5%; } }
+#transparencia .proposta-eletronica .content { position: relative; }
+#transparencia .proposta-eletronica .content .box-title { height: 100%; }
+#transparencia .proposta-eletronica .content .box-title .title { width: 100%; display: block; font-size: 2.5em; color: #FEFEFE; text-align: center; line-height: 1.5; }
+#transparencia .proposta-eletronica .content .box-title .divider { background: #FEFEFE; width: 50%; height: 1px; margin: 2% 25%; display: block; }
+#transparencia .proposta-eletronica .content .box-title i { width: 100%; display: block; text-align: center; fill: #FEFEFE; }
+#transparencia .proposta-eletronica .content .description { height: 100%; }
+#transparencia .proposta-eletronica .content .description p { width: 95%; font-size: 1.2em; color: #FEFEFE; line-height: 1.5; margin: 2.5%; }
+#transparencia .proposta-eletronica .download { height: 100%; position: relative; }
+#transparencia .proposta-eletronica .download .wrapper-download { background: rgba(210, 211, 213, 0.9); width: 45%; height: 100%; margin: 0 2.5%; float: left; position: relative; }
+#transparencia .proposta-eletronica .download .wrapper-download .title { font-size: 1.8em; color: #982C48; text-align: center; margin: 4% 0; display: block; }
+#transparencia .proposta-eletronica .download .wrapper-download p { font-size: 1.4em; color: #982C48; text-align: center; margin: 2% 0; display: block; }
+#transparencia .proposta-eletronica .download .wrapper-download i { width: 100%; fill: #982C48; text-align: center; margin: 10% 0; display: block; }
+
+@media(max-width: 360px) { #contato { background: #D2D3D5; height: 100vh; } }
+@media(min-width: 1280px) { #contato { background: #f4f3ef; height: 100vh; position: relative; } }
+@media(min-width: 1280px) { #contato .title-container { width: 20%; height: 50px; margin: 1% 5%; } }
+@media(min-width: 1280px) { #contato .title-container .title-section { font-size: 1.8em; color: #333333; line-height: 2; text-transform: uppercase; } }
+@media(min-width: 1280px) { #contato .title-container .today { font-family: "Lato", sans-serif; font-size: 1.2em; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; color: #333333; } }
+@media(min-width: 1280px) { #contato .title-container .today .hour { display: block; } }
+@media(max-width: 360px) { #contato .wrapper-contato { height: auto; } }
+@media(min-width: 1280px) { #contato .wrapper-contato { margin: 2% 5%; } }
+@media(max-width: 360px) { #contato .wrapper-contato .form { width: 100%; height: 50%; float: none; } }
+@media(min-width: 1280px) { #contato .wrapper-contato .form { height: auto; } }
+@media(max-width: 360px) { #contato .wrapper-contato .form .title { font-size: 1.6em; font-weight: 400; text-align: center; color: #6B809B; } }
+@media(min-width: 1280px) { #contato .wrapper-contato .form .title { font-size: 1.6em; text-align: left; color: #6B809B; margin-left: 5%; margin-bottom: 2%; display: block; } }
+@media(max-width: 360px) { #contato .wrapper-contato .form .title .divider { display: none; } }
+@media(min-width: 1280px) { #contato .wrapper-contato .form .title .divider { background: #6B809B; width: 180px; height: 1px; margin-top: 1%; display: block; } }
+@media(max-width: 360px) { #contato .wrapper-contato .form input { background: rgba(44, 62, 80, 0.1); width: 87%; margin: 1% 5%; font-size: 1.6em; color: black; padding: 2% 0 2% 2%; border: none; border-bottom: 2px solid rgba(44, 62, 80, 0.2); } }
+@media(min-width: 1280px) { #contato .wrapper-contato .form input { background: none; width: 87%; height: 35px; margin: 1% 5%; padding-left: 2%; border: none; color: #6B809B; text-transform: uppercase; box-shadow: 4px 4px 2px #D2D3D5; } }
+@media(max-width: 360px) { #contato .wrapper-contato .form textarea { background: rgba(44, 62, 80, 0.1); width: 87%; height: 5em; margin: 1% 5%; padding: 1%; border: none; border-bottom: 2px solid rgba(44, 62, 80, 0.2); } }
+@media(min-width: 1280px) { #contato .wrapper-contato .form textarea { background: none; width: 87%; height: 100px; margin: 1% 5%; padding-left: 2%; border: none; color: #6B809B; text-transform: uppercase; box-shadow: 4px 4px 2px #D2D3D5; } }
+#contato .wrapper-contato .form ::-webkit-input-placeholder { color: #6B809B; }
+#contato .wrapper-contato .form ::-moz-placeholder { color: #6B809B; }
+#contato .wrapper-contato .form :-ms-input-placeholder { color: #6B809B; }
+#contato .wrapper-contato .form ::placeholder { color: #6B809B; }
+@media(min-width: 1280px) { #contato .wrapper-contato .form .btn-enviar { background: none; width: 150px; height: 45px; margin: 0 5%; border: 5px solid #00A859; font-size: 1.4em; color: #068B3E; text-transform: uppercase; } }
+@media(min-width: 1280px) { #contato .wrapper-contato .form .btn-cancelar { background: none; width: 130px; height: 45px; border: 4px solid #982C48; font-size: 1.4em; color: #982C48; text-transform: uppercase; } }
+@media(max-width: 360px) { #contato .endereco { display: none; } }
+@media(min-width: 1280px) { #contato .endereco { display: inline-block; } }
+#contato .endereco .title { width: 150px; height: 50px; font-size: 1.6em; color: #6B809B; text-align: center; display: block; position: relative; float: left; }
+#contato .endereco .title .divider { background: #6B809B; width: 1px; height: 25px; top: 7px; right: 0; position: absolute; display: block; }
+#contato .endereco .wrapper-rotas { width: 73%; height: 50px; float: right; }
+#contato .endereco .wrapper-rotas .cidade { display: block; font-size: 1em; text-align: center; text-transform: uppercase; line-height: 1.2; }
+#contato .endereco .wrapper-rotas .divider { display: block; text-align: center; }
+#contato .endereco iframe { margin: 1% 0; }
+#contato .plugin-fb-page { background: none; width: 95%; height: 100px; margin: 15% 2.5%; display: none; }
+@media(max-width: 360px) { #contato .contact-menu { background: #982C48; width: 100%; height: 45px; margin-top: 120px; } }
+@media(min-width: 1280px) { #contato .contact-menu { display: none; } }
+#contato .contact-menu .menu { width: 100%; height: 100%; }
+#contato .contact-menu .menu .menu-item { width: 33%; text-align: center; float: left; color: #FEFEFE; fill: #FEFEFE; }
+#contato .contact-menu .menu .menu-item h2 { margin: 5%; }
+#contato .contact-menu .menu .menu-item svg { margin: 0 auto; display: block; }
+#contato .contact-menu .menu .menu-item span { color: #FEFEFE; }
+
+@media(max-width: 360px) { #rodape { background: #068B3E; height: auto; color: #FEFEFE; text-transform: uppercase; } }
+@media(min-width: 1280px) { #rodape { background: #068B3E; height: auto; color: #FEFEFE; text-transform: uppercase; } }
+#rodape .container { margin: 1% 5%; }
+#rodape .container .izzyweb { width: auto; height: auto; margin: 5% auto; display: block; }
+#rodape .container .box-atendimento, #rodape .container .box-endereco, #rodape .container .box-apoio, #rodape .container .direitos { width: 90%; height: auto; margin: 1% 5%; }
+#rodape .container .box-atendimento .title, #rodape .container .box-endereco .title, #rodape .container .box-apoio .title, #rodape .container .direitos .title { font-size: 1.8em; }
+#rodape .container .box-atendimento .title .divider, #rodape .container .box-endereco .title .divider, #rodape .container .box-apoio .title .divider, #rodape .container .direitos .title .divider { background: rgba(27, 190, 188, 0.2); width: 120px; height: 2px; margin: 2% 0; display: block; }
+#rodape .container .box-atendimento .item-info, #rodape .container .box-endereco .item-info, #rodape .container .box-apoio .item-info, #rodape .container .direitos .item-info { width: 100%; height: 25px; border-bottom: 1px solid rgba(27, 190, 188, 0.2); font-size: 1.2em; line-height: 2; }
+#rodape .container .box-atendimento .item-info svg, #rodape .container .box-endereco .item-info svg, #rodape .container .box-apoio .item-info svg, #rodape .container .direitos .item-info svg { margin: 1% 2%; fill: #FEFEFE; float: left; }
+#rodape .container .box-atendimento img, #rodape .container .box-endereco img, #rodape .container .box-apoio img, #rodape .container .direitos img { width: 90%; margin: 1% 5%; }
+#rodape .container .box-atendimento .gestao, #rodape .container .box-atendimento .cidade, #rodape .container .box-endereco .gestao, #rodape .container .box-endereco .cidade, #rodape .container .box-apoio .gestao, #rodape .container .box-apoio .cidade, #rodape .container .direitos .gestao, #rodape .container .direitos .cidade { text-align: center; color: #FEFEFE; margin: 0.5% 0; display: block; }
+
+@media(max-width: 360px) { #blog-post { width: 95%; margin: 0 2.5%; } }
+@media(min-width: 1280px) { #blog-post { background: #FEFEFE; margin: 0 auto; } }
+#blog-post .modo-leitura { display: none; }
+@media(max-width: 360px) { #blog-post .content-post { margin-top: 20%; } }
+@media(min-width: 1280px) { #blog-post .content-post { margin: 0 auto; } }
+@media(min-width: 1280px) { #blog-post .content-post .wrapper-header { height: 450px; position: relative; float: none; display: inline-block; } }
+@media(min-width: 1280px) { #blog-post .content-post .wrapper-header img { width: 100%; height: 100%; top: 0; left: 0; -webkit-filter: blur(5px); filter: blur(5px); position: fixed; } }
+@media(max-width: 360px) { #blog-post .content-post .wrapper-header .title-post { font-size: 3em; color: #6B809B; text-align: center; } }
+@media(min-width: 1280px) { #blog-post .content-post .wrapper-header .title-post { width: 80%; font-size: 3em; color: #FEFEFE; text-align: center; margin: 15% 10% 2% 10%; z-index: 9; position: absolute; } }
+@media(max-width: 360px) { #blog-post .content-post .wrapper-header .date { width: 100%; height: auto; margin-bottom: 5%; display: block; font-size: 1.2em; color: #982C48; font-style: italic; text-align: center; } }
+@media(min-width: 1280px) { #blog-post .content-post .wrapper-header .date { width: 100%; height: auto; margin-bottom: 5%; display: block; font-size: 1.4em; color: #FEFEFE; font-style: italic; text-align: center; text-transform: uppercase; position: absolute; bottom: 0; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post { background: #FEFEFE; position: absolute; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-post { margin: 2% 10%; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-post h1 { font-size: 2.7em; margin: 2% 0; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-post h2 { font-size: 2.5em; margin: 2% 0; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-post h3 { font-size: 2.3em; margin: 2% 0; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-post h4 { font-size: 2.1em; margin: 2% 0; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-post .gallery { width: 100%; height: 160px; overflow: hidden; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-post .gallery .gallery-item { width: 240px; height: 150px; float: left; margin: 0.5%; position: relative; box-shadow: 4px 4px 4px rgba(210, 211, 213, 0.9); } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-post .gallery .gallery-item img { width: 100%; height: 100%; position: absolute; } }
+@media(max-width: 360px) { #blog-post .content-post .bg-post .wrapper-post .gallery .gallery-item figcaption { background: rgba(189, 195, 199, 0.5); width: 96%; padding: 2%; color: #6B809B; text-align: center; font-style: italic; font-size: 1.2em !important; border-bottom: 2px solid rgba(107, 128, 155, 0.5); top: -2px; position: relative; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-post .gallery .gallery-item figcaption { display: none; } }
+#blog-post .content-post .bg-post .wrapper-post p { font-size: 1.6em; line-height: 1.6em; color: #333333; padding: 2%; }
+#blog-post .content-post .bg-post .wrapper-post iframe { width: 100%; height: 450px; }
+@media(max-width: 360px) { #blog-post .content-post .bg-post .wrapper-informations { width: 100% !important; height: auto; margin: 5% 0; display: block; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations { height: auto; margin: 1% 10%; border-bottom: 1px solid #D2D3D5; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations .wrapper-category .title { font-size: 1.4em; text-transform: uppercase; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations .wrapper-category i { fill: #D2D3D5; display: block; float: left; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations .wrapper-category .post-categories { width: 80%; height: auto; margin: 1% 10%; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations .wrapper-category .post-categories li { font-size: 1.2em; text-transform: uppercase; margin: 2% 0; } }
+#blog-post .content-post .bg-post .wrapper-informations .wrapper-category .post-categories li a { color: #6B809B; -webkit-transition: 0.3s ease-in-out; transition: 0.3s ease-in-out; }
+#blog-post .content-post .bg-post .wrapper-informations .wrapper-category .post-categories li a:hover { color: #982C48; }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations .wrapper-author .title { font-size: 1.4em; text-transform: uppercase; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations .wrapper-author i { fill: #D2D3D5; margin: 0 1%; display: block; float: left; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations .wrapper-author .author { font-size: 1.2em; color: #6B809B; text-transform: uppercase; margin: 2% 0; display: block; } }
+#blog-post .content-post .bg-post .wrapper-informations .edit { background: #982C48; width: 20%; text-align: center; margin: 1% 40%; top: 20px; padding: 2%; position: relative; display: none; }
+#blog-post .content-post .bg-post .wrapper-informations .edit a { color: #FEFEFE; }
+#blog-post .content-post .bg-post .wrapper-informations .wrapper-options i { width: 48%; height: 100%; text-align: center; color: #6B809B; fill: #6B809B; margin: 0 1%; cursor: pointer; float: left; -webkit-transition: 0.3s ease-in-out; transition: 0.3s ease-in-out; }
+#blog-post .content-post .bg-post .wrapper-informations .wrapper-options i svg { margin: 1% auto; display: block; }
+#blog-post .content-post .bg-post .wrapper-informations .wrapper-options i:hover { color: #982C48; fill: #982C48; }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations .wrapper-network { height: 100%; display: block; position: relative; -webkit-transition: 0.5s ease-in-out; transition: 0.5s ease-in-out; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations .wrapper-network .title { font-size: 1.4em; text-transform: uppercase; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations .wrapper-network i { fill: #D2D3D5; margin: 0 3.5%; display: block; float: left; } }
+@media(min-width: 1280px) { #blog-post .content-post .bg-post .wrapper-informations .wrapper-network .container-network { width: 100%; text-align: left; } }
+#blog-post .content-post .bg-post .wrapper-informations .wrapper-network .container-network .twitter { width: 100%; margin: 2% 15%; display: block; }
+#blog-post .content-post .bg-post .wrapper-informations .wrapper-network .container-network .g-plus { width: 100%; margin: 2% 15%; display: block; }
+#blog-post .content-post .bg-post .wrapper-informations .wrapper-network .container-network .fb-share-button { width: 100%; margin: 2% 15%; display: block; }
+#blog-post .content-post .bg-post .comentarios { margin: 5% 10%; }
+#blog-post .content-post .bg-post .comentarios .title { font-size: 1.6em; color: #6B809B; text-align: center; margin: 1% 25%; }
+#blog-post .content-post .bg-post .comentarios .warning { font-size: 1.2em; font-style: italic; text-align: center; line-height: 1.4em; margin-left: 25%; }
+#blog-post .content-post .bg-post .comentarios .fb-comments { margin-left: 24.5%; }
+
+@media(min-width: 1280px) { #page-content { margin: 110px 5%; } }
+@media(min-width: 1280px) { #page-content h1 { font-size: 2.7em; margin: 2% 0; } }
+@media(min-width: 1280px) { #page-content h2 { font-size: 2.5em; margin: 2% 0; } }
+@media(min-width: 1280px) { #page-content h3 { font-size: 2.3em; margin: 2% 0; } }
+@media(min-width: 1280px) { #page-content h4 { font-size: 2.1em; margin: 2% 0; } }
+@media(min-width: 1280px) { #page-content h5 { font-size: 1.9em; margin: 2%; } }
+@media(min-width: 1280px) { #page-content .title-page { text-align: left; color: #333333; } }
+@media(min-width: 1280px) { #page-content .date { color: text-color; top: 20.5%; position: absolute; } }
+@media(min-width: 1280px) { .content #perfil { margin-top: 2%; position: relative; } }
+@media(min-width: 1280px) { .content #perfil .pic-perfil { width: 250px; height: 250px; margin: 2% 45px; border-radius: 10%; box-shadow: 0px 0px 4px #D2D3D5; } }
+@media(min-width: 1280px) { .content #perfil .label { margin: 2% 45px; font-size: 1.4em; color: #6B809B; display: block; } }
+@media(min-width: 1280px) { .content #perfil .label-item { margin: auto 45px; font-size: 1.6em; color: #6B809B; } }
+.content #perfil .divider { background: #D2D3D5; width: 50%; height: 1px; margin: 2% 45px; display: block; }
+@media(min-width: 1280px) { .content #description { position: relative; } }
+.content #description p { font-size: 1.6em; line-height: 1.6em; }
+.content #description ul li { font-size: 1.4em; font-style: italic; line-height: 1.4em; }
